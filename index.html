@@ -3,281 +3,73 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ootr no spoiler json search</title>
+    <title>OOTR No Spoiler JSON Search</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-    <style>
-        /* Dark mode styles */
-        :root {
-            --background-color: #121212;
-            --text-color: #e0e0e0;
-            --primary-color: #673AB7;
-            --secondary-color: #673AB7;
-            --input-bg-color: #1e1e1e;
-            --input-border-color: #292929;
-            --hover-color: #333333;
-            --result-highlight: #212121;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 20px;
-            height: 50vh;
-            display:flex;
-            flex-direction: column;
-        }
-
-        h1, h3 {
-            color: #9575CD;
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        input[type="file"] {
-            width: 100%;
-            max-width: 400px;
-            padding: 10px;
-            margin-bottom: 20px;
-            background-color: var(--input-bg-color);
-            border: 1px solid var(--input-border-color);
-            border-radius: 4px;
-            color: var(--text-color);
-            font-size: 16px;
-            cursor: pointer;
-            text-align: center;
-            appearance: none;
-            position: relative;
-        }
-
-            input[type="file"]::file-selector-button {
-                background-color: var(--primary-color);
-                color: var(--text-color);
-                border: none;
-                padding: 10px;
-                margin-right: 10px;
-                border-radius: 4px;
-                cursor: pointer;
-                font-size: 14px;
-                transition: background-color 0.3s ease;
-            }
-
-                input[type="file"]::file-selector-button:hover {
-                    background-color: var(--secondary-color);
-                }
-
-            input[type="file"]:hover {
-                border-color: var(--primary-color);
-            }
-
-        input[type="file"],
-        input[type="text"] {
-            width: 50vw;
-            padding: 10px;
-            margin-bottom: 20px;
-            background-color: var(--input-bg-color);
-            border: 1px solid var(--input-border-color);
-            border-radius: 4px;
-            color: var(--text-color);
-            font-size: 16px;
-        }
-            input[type="text"]:focus-visible {
-                outline: solid #9575CD;
-            }
-
-            input[type="text"]:disabled {
-                background-color: var(--hover-color);
-                color: #7a7a7a;
-            }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            padding: 10px;
-            margin: 5px 0;
-            background-color: var(--hover-color);
-            border-radius: 4px;
-            color: var(--text-color);
-            cursor: pointer;
-        }
-
-        .ui-menu-item {
-            border-radius: 0px;
-        }
-
-        li:hover {
-            background-color: var(--result-highlight);
-        }
-
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Scrollbar styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: var(--primary-color);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background-color: var(--background-color);
-        }
-
-        #result {
-            color:var(--primary-color);
-            width: 50vw;
-            display: flex;
-            align-self: center;
-            flex-direction:column;
-            text-align:center;
-        }
-
-        #search-container {
-            display: flex;
-            width: 40vw;
-            flex-direction: column;
-            justify-content: space-between;
-            align-self: center;
-            align-items: center;
-        }
-
-        .result {
-            background-color: var(--input-bg-color)
-        }
-    </style>
+    <link rel="stylesheet" href="./site.css">
 </head>
 <body>
-    <h1>ootr no spoiler json search</h1>
-
+    <!--<span><img style="height: 24px; width:24px;" src="./discord-mark-blue.svg"/></span>-->
+    <h1>OOTR No Spoiler JSON Search</h1>
     <div id="search-container">
-        <div>
-            <label for="jsonUpload">json file (ex: 40-33-92-33-20.json):</label>
+        <div class="upload-container">
+            <label for="jsonUpload">Upload JSON (e.g., 40-33-92-33-20.json):</label>
             <input type="file" id="jsonUpload" accept=".json">
         </div>
-        <div>
-            <input type="text" id="autocomplete" placeholder="search here" disabled>
+        <div class="search-bar">
+            <input type="text" id="autocomplete" placeholder="Search here..." disabled>
         </div>
     </div>
-    <ul id="result"></ul>
+    <h3 id="ResultHeader"></h3>
+    <div id="ResultContainer" class="result-container">
+    </div>
+    <div id="GoModeItemContainer" class="items-container"></div>
+    <div id="KeyItemContainer" class="items-container"></div>
+    <div id="hints-container">
+        <div class="hint-bank">
+            <label>Hint Bank</label>
+            <div>
+                <img class="svg-button" src="./img/minus.svg" onclick="ChangeCounter(-1)" />
+                <span style="font-size: 32px; margin: 0px 8px 0px 8px" id="hint-number">0</span>
+                <img class="svg-button" src="./img/plus.svg" onclick="ChangeCounter(1)" />
+            </div>
+        </div>
+        <label class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span><span>&nbsp; Private Hint</span>
+        </label>
+        <label class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span><span>&nbsp; Public Hint 1</span>
+        </label>
+        <label class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span><span>&nbsp; Public Hint 2</span>
+        </label>
+    </div>
+    <div id="timer-container">
+        <svg>
+            <circle cx="75" cy="75" r="70" stroke="#1e1e1e" stroke-width="5" fill="none"></circle>
+            <circle id="progress" cx="75" cy="75" r="70" stroke="#673AB7" stroke-width="5" fill="none" stroke-dasharray="440" stroke-dashoffset="440"></circle>
+        </svg>
+        <div id="timer" onclick="editTime()">15:00</div>
+        <input type="text" id="timeInput" style="display: none;" onblur="setTime()" onkeypress="handleKeyPress(event)" autocomplete="off">
+        <div id="button-container">
+            <img id="playPauseBtn" class="svg-button" src="./img/play.svg" onclick="toggleTimer()" />
+            <img class="svg-button" src="./img/reset.svg" onclick="resetTimer()" />
+        </div>
+    </div>
 
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-    <script type="text/javascript">
+    <script src="./site.js"></script>
+    <script src="./timer.js"></script>
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <script>
         kofiWidgetOverlay.draw('lloydsecret', {
             'type': 'floating-chat',
-            'floating-chat.donateButton.text': 'coffee me',
+            'floating-chat.donateButton.text': 'Support Me',
             'floating-chat.donateButton.background-color': '#794bc4',
             'floating-chat.donateButton.text-color': '#fff'
-        });
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            Array.prototype.random = function () {
-                return this[Math.floor(Math.random() * this.length)];
-            };
-
-            let locations = {};
-            let values = [];
-            let clickedItems = {};
-
-            $("#jsonUpload").on("change", function (event) {
-                $("#result").html("");
-                $("#autocomplete").val("");
-                clickedItems = {};
-                localStorage.clear();
-
-                const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        try {
-                            const parsedData = JSON.parse(e.target.result);
-                            if (parsedData.locations && typeof parsedData.locations === "object") {
-                                locations = parsedData.locations;
-
-                                values = [...new Set(
-                                    Object.values(locations).map(val => val?.item || val)
-                                )];
-
-                                $("#autocomplete").prop("disabled", false);
-
-                                $("#autocomplete").autocomplete({
-                                    source: values,
-                                    minLength: 2,
-                                    delay: 100,
-                                    select: function (event, ui) {
-                                        const selectedValue = ui.item.value;
-
-                                        const matchingKeys = Object.keys(locations).filter(key => {
-                                            const val = locations[key];
-                                            return val?.item === selectedValue || val === selectedValue;
-                                        });
-
-                                        const resultList = $("#result");
-                                        resultList.empty();
-
-                                        if (matchingKeys.length > 0) {
-                                            matchingKeys.forEach((key, index) => {
-                                                const displayValue = locations[key]?.item || locations[key];
-                                                const isClicked = clickedItems[key] || false;
-
-                                                resultList.append(`
-                                                        <li id="item${index}"
-                                                            class="result ${isClicked ? 'shown' : ''}"
-                                                            data-key="${key}">
-                                                            ${isClicked ? key : "click to show hint"}
-                                                        </li>
-                                                    `);
-                                            });
-
-                                            $(".result").click(function () {
-                                                const key = $(this).data("key");
-                                                if (!clickedItems[key]) {
-                                                    clickedItems[key] = true;
-                                                    try {
-                                                        localStorage.setItem("clickedItems", JSON.stringify(clickedItems));
-                                                    } catch (error) { }
-                                                    $(this).html(key).addClass("shown");
-                                                }
-                                            });
-                                        } else {
-                                            resultList.append("<li>No matching keys found.</li>");
-                                        }
-                                    }
-                                });
-                            } else {
-                                alert("Uploaded JSON must contain a 'locations' object.");
-                            }
-                        } catch (error) {
-                            alert("Error parsing JSON. Ensure the file contains valid JSON.");
-                        }
-                    };
-
-                    reader.readAsText(file);
-                } else {
-                    alert("No file selected.");
-                }
-            });
         });
     </script>
 </body>
