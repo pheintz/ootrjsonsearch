@@ -153,6 +153,13 @@ a {
     align-items: center;
 }
 
+.tricksList {
+    display: flex;
+    justify-content: inherit;
+    justify-self: center;
+    flex-direction: column;
+}
+
 .items-container {
     display: flex;
     flex-direction: row;
