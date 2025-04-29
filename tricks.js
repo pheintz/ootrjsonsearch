@@ -50,8 +50,12 @@ $(document).ready(function () {
 
             filteredTricks.forEach(trick => {
                 trick.items.forEach(item => filters.add(item.toLowerCase()));
-                filters.add(trick.location.toLowerCase());
-                filters.add(trick.age.toLowerCase());
+                if (trick.location) {
+                    filters.add(trick.location.toLowerCase());
+                }
+                if (trick.age) {
+                    filters.add(trick.age.toLowerCase());
+                }
             });
 
             if (filters.size > 0) {
@@ -68,23 +72,20 @@ $(document).ready(function () {
                     <div class="trick-card-container">
                         <div class="trick-card">
                             <h2>${trick.name}</h2>
-                            <div class="tags-container">
-                                <strong>Tags:</strong>
-                                <div class="tag">${trick.location}</div>
-                                <div class="tag">${trick.age}</div>
-                                ${trick.items.map(item => `<div class="tag">${item}</div>`).join('')}
-                            </div>
+                            <div class="description"><strong>How to do it:</strong> ${trick.description.replace(/\n/g, '<br>')}</div>
                             <div class="video-container">
                                 <iframe
                                     src="${embedUrl}" 
                                     title="YouTube video player" 
                                     frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen
-                                ></iframe>
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
-                            <p><strong>Credit:</strong> <a href="${trick.credit}" target="_blank">${trick.credit}</a></p>
-                        </div>
+                           <div class="tags-container">
+                                <strong>Tags:</strong>
+                                <div class="tag">${trick.location}</div>
+                                <div class="tag">${trick.age}</div>
+                                ${trick.items.map(item => `<div class="tag">${item}</div>`).join('')}
+                            </div>                        </div>
                     </div>
                 `;
             }).join('');

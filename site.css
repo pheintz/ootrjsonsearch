@@ -32,6 +32,7 @@ label {
     font-weight: bold;
 }
 
+
 input[type="file"] {
     width: 100%;
     max-width: 400px;
@@ -240,34 +241,50 @@ svg {
     flex-direction: column;
 }
 
-#hint-number{
-
+#hint-number {
 }
 
-.hint-bank{
+.hint-bank {
     margin-bottom: 12px;
 }
-.trick-card{
-    min-width: 50%;
+
+.trick-card {
+    width: 100%;
 }
+
 .trick-card-container {
+    justify-self: center;
+    align-self: center;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 24px;
+    border-top: 1px solid var(--input-border-color);
 }
+
+@media (max-width: 1199px) {
+    .trick-card-container {
+        width: 100%;
+        padding: 0 12px; /* Optional: add side padding */
+    }
+}
+
 .tags-container {
+    margin-top: 8px;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
     gap: 10px;
 }
-.tag {
 
+.tag {
     color: var(--text-color);
     margin: 2px;
 }
+
 .filter-button {
     background-color: var(--input-bg-color);
     color: var(--text-color);
@@ -277,14 +294,16 @@ svg {
     margin: 2px;
     cursor: pointer;
 }
-.filter-button:hover {
-    background-color: var(--hover-color);
-    color: var(--text-color);
-}
-.filter-button.active {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-}
+
+    .filter-button:hover {
+        background-color: var(--hover-color);
+        color: var(--text-color);
+    }
+
+    .filter-button.active {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+    }
 
 .filter-container {
     display: flex;
@@ -295,22 +314,22 @@ svg {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
     width: 100%;
+    aspect-ratio: 16/9;
     border-radius: 12px;
     box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    overflow: hidden; /* optional but harmless */
 }
 
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 
 /* Start checkbox */
 .custom-checkbox {
@@ -360,3 +379,33 @@ svg {
 
 
 /* End checkbox */
+
+/* jQuery UI Autocomplete - Dark Mode */
+.ui-autocomplete {
+    background-color: var(--input-bg-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+    margin: 16px 0px 24px 0px;
+}
+
+.ui-menu-item-wrapper {
+    padding: 10px;
+    color: var(--text-color);
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+    .ui-menu-item-wrapper.ui-state-active {
+        background-color: var(--result-highlight) !important;
+        color: var(--text-color);
+        border-color: transparent;
+    }
