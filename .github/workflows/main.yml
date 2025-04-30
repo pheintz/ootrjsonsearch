@@ -29,4 +29,5 @@ jobs:
           timeout: 30
           max_retries: 3
           script: |
-            set mirror:exclude-regex ^(\.git|\.github|\.gitignore|README\.md)$
+            set mirror:exclude-regex "^(\..*|README\.md)$"
+
