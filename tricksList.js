@@ -75,7 +75,7 @@ window.getTricks = function getTricks() {
                 "location": "lost woods",
                 "description": "Target around texture shown, 1 ess right, Sidehop left, Backflip, (Slash stick and sidehop)for position, time jumpslash to clip",
                 "items": ["1hw", "2hw"],
-                "age": "any age",
+                "age": "child",
                 "embed": "https://www.youtube.com/embed/D3RSZ1WyB5A",
                 "credit": "https://www.youtube.com/@StoneeBadLuck"
             },
@@ -102,17 +102,17 @@ window.getTricks = function getTricks() {
                 "location": "Forest Temple",
                 "description": "",
                 "items": ["bombchu", "hover boots"],
-                "age": "any age",
+                "age": "adult",
                 "embed": "https://youtube.com/shorts/MqgM5zs8Xdc",
                 "credit": "https://www.youtube.com/@JBurtonGaming"
             },
             {
                 "name": "Forest Temple First Green Block Skip",
                 "location": "Forest Temple",
-                "description": "",
+                "description": "sidehop, roll, get into corner, crouchstab 2x, jumpslash",
                 "items": ["1HW", "2HW"],
                 "age": "adult",
-                "embed": "",
+                "embed": "https://youtube.com/embed/xqUVH-3T9Nw",
                 "credit": ""
             },
             {
@@ -121,22 +121,14 @@ window.getTricks = function getTricks() {
                 "description": "",
                 "items": ["1HW", "2HW"],
                 "age": "adult",
-                "embed": "",
-                "credit": ""
-            },
-            {
-                "name": "Forest Temple Megaflip to Scarecrow",
-                "location": "Forest Temple",
-                "description": "Go into corner next to switch and align with wall. turn around and hold angle with z. Roll into left corner of balcony. Climb up and turn right. Z target and sidestep to the left until link's right heel is just touching the balcony. C-up to line yourself up with the scarecrow landing spot. Turn around and megabackflip.",
-                "items": ["bombchu"],
-                "age": "any",
-                "embed": "",
+                "embed": "https://youtube.com/embed/KW9U3UyDZr4",
                 "credit": ""
             },
             {
                 "name": "Weirdshot Fire Temple BK Chest",
                 "location": "Fire Temple",
-                "description": ``,
+                "description": `see: "How To Weirdshot"
+                `,
                 "items": ["hookshot"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/embed/IPpPgkgMnPw",
@@ -290,23 +282,7 @@ window.getTricks = function getTricks() {
             {
                 "name": "Volvagia Quick Kill Weirdshot w/ Bow",
                 "location": "Fire Temple",
-                "description": `bonk wall
-                                quick shield drop bomb
-                                backflip
-                                pull hookshot and cancel with shield
-                                Buffer in L+R roll on big blue
-                                hold exactly down on control stick from 2nd frame of roll until frame where you pull hookshot
-                                frames
-
-                                from first damage frame
-                                1 Z+R+Down
-                                2 Z+R+Down
-                                3 Z+R+Down
-                                4 Z+R+Down
-                                5 Z+Down*  Should see link move forward on this frame. If he moves backwards most likely you're not holding exactly down on control stick even a few degrees will mess it up.
-                                6 *Release down* Z+Bow
-
-                                Let go of Z and unpause when fully underground
+                "description": `see: "How To Weirdshot"
                 `,
                 "items": ["bow", "hammer"],
                 "age": "adult",
@@ -344,7 +320,7 @@ window.getTricks = function getTricks() {
                                 R+Z+down on control stick for the rest
                 `,
                 "items": ["bombs"],
-                "age": "adult",
+                "age": "child",
                 "embed": "https://youtube.com/embed/BGQS_VSnrtw",
                 "credit": ""
             },
@@ -359,7 +335,7 @@ window.getTricks = function getTricks() {
                                 R+Z+Roll on black chu to the right
                 `,
                 "items": ["bombchu"],
-                "age": "adult",
+                "age": "child",
                 "embed": "https://youtube.com/embed/yZcLZ4H6biY",
                 "credit": ""
             },
@@ -373,8 +349,73 @@ window.getTricks = function getTricks() {
                                 sidehop 2nd frame link is in the explosion
                 `,
                 "items": ["bombs"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/THbUU1wWTsE",
+                "credit": ""
+            },
+            {
+                "name": "How To Weirdshot",
+                "location": "general",
+                "description": `z target wall
+                                bonk wall
+                                quick shield drop bomb
+                                backflip
+                                pull hookshot or bow and cancel with shield
+                                Buffer in L+R roll on big blue, big red, or first explosion frame
+                                hold exactly down on control stick from 2nd frame of roll until frame where you pull hookshot
+                                frames
+
+                                from first damage frame
+                                1 Z+R+Down
+                                2 Z+R+Down
+                                3 Z+R+Down
+                                4 Z+R+Down
+                                5 Z+Down*  Should see link move forward on this frame. If he moves backwards most likely you're not holding exactly down on control stick even a few degrees will mess it up.
+                                6 *Release down* Z+Bow
+
+                                Let go of Z and unpause when fully underground
+                `,
+                "items": ["bow", "hookshot"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/THbUU1wWTsE",
+                "credit": ""
+            },
+            {
+                "name": "Bottom of the Well Actor Deload",
+                "location": "Bottom of the Well",
+                "description": `open the door as fast as possible after exiting crawlspace
+                                you should come out of the door into the same room you entered from
+                                go back through the crawlspace you came from
+                                water will be deloaded and you can go crawl to deadhand room
+                `,
+                "items": ["bombs"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/Y9DnpdHWLhs",
+                "credit": ""
+            },
+            {
+                "name": "DMC Fairy Boulder Skip w/ Bombchu",
+                "location": "Death Mountain Crater",
+                "description": `target wall turn left shield drop chu while backwalking
+                `,
+                "items": ["bombchu"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/OrFZVADl1O8",
+                "credit": ""
+            },
+            {
+                "name": "DMC Weirdclip Into Boulder Grotto",
+                "location": "Death Mountain Crater",
+                "description": `target wall and roll into corner
+                                backflip, sidehop left, backflip, sidehop left
+                                drop bomb and backflip don't let go of z,
+                                roll, roll, shieldcancel hookshot or bow
+                                do weirdshot but never let go of Z.
+                                see: "how to weirdshot"
+                `,
+                "items": ["bombs", "hookshot", "bow"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/UtxxHi8Ox0s",
                 "credit": ""
             },
         ]
