@@ -15,12 +15,12 @@ jobs:
       - name: FTP Upload to ftpupload.net
         uses: pontago/lftp-deploy-action@v1.0.1
         with:
-          host: ${{ secrets.FTP_HOST }}                # set to ftpupload.net
-          username: ${{ secrets.FTP_USERNAME }}        # your username
-          password: ${{ secrets.FTP_PASSWORD }}        # your password
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           port: "21"
           protocol: "ftp"
-          local_dir: "."                               # root of the repo
+          local_dir: "."
           remote_dir: "/ootrjsonsearch.org/htdocs"
           create_remote_dir: true
           verify_cert: true
@@ -28,3 +28,5 @@ jobs:
           debug: false
           timeout: 30
           max_retries: 3
+          script: |
+            set mirror:exclude-regex ^(\.git|\.github|\.gitignore|README\.md)$
