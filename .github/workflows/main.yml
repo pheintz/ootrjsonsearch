@@ -29,5 +29,9 @@ jobs:
           timeout: 30
           max_retries: 3
           script: |
+            # Change to the target remote directory
+            cd /ootrjsonsearch.org/htdocs
+            # Exclude all hidden folders and specific files (e.g., .git)
             set mirror:exclude-regex "^\..*|^(\.git|\.github|\.gitignore|README\.md)$"
+            # Upload files to the correct remote directory
             mirror --reverse --only-newer --delete --verbose .
