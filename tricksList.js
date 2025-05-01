@@ -377,7 +377,7 @@ window.getTricks = function getTricks() {
                 `,
                 "items": ["bow", "hookshot"],
                 "age": "adult",
-                "embed": "https://youtube.com/embed/THbUU1wWTsE",
+                "embed": "https://youtube.com/embed/IvQk6G__f2Q",
                 "credit": ""
             },
             {
