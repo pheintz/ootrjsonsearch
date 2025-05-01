@@ -37,11 +37,13 @@ jobs:
           timeout: 30
           max_retries: 3
           script: |
-                  cd /ootrjsonsearch.org/htdocs
-                  mirror --reverse --only-newer --delete --verbose \
-                    --exclude-glob .git/ \
-                    --exclude-glob .github/ \
-                    --exclude-glob README.md \
-                    ./ .
+              cd /ootrjsonsearch.org/htdocs
+              mirror --reverse --only-newer --delete --verbose \
+                --exclude ^\.git/ \
+                --exclude ^\.github/ \
+                --exclude ^README\.md$ \
+                ./ .
+
+
 
 
