@@ -64,7 +64,7 @@ window.getTricks = function getTricks() {
                                 On big red -
                                 Frame 0: A+Z+R
                                 Frame 1: Z+R+Hold down the entire rest of the way
-                                On 2nd frame link is entirely in the explosion: A+Z+R+Down`,
+                                On the 2nd frame that link is entirely inside the explosion: A+Z+R+Down`,
                 "items": ["bombs"],
                 "age": "any age",
                 "embed": "https://www.youtube.com/embed/T7A5vm4iXJw",
