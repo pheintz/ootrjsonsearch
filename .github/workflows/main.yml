@@ -37,7 +37,11 @@ jobs:
           timeout: 30
           max_retries: 3
           script: |
-            cd /ootrjsonsearch.org/htdocs
-            set mirror:exclude-regex "^\..*|^README\.md$"
-            mirror --reverse --only-newer --delete --verbose ./ .
+                  cd /ootrjsonsearch.org/htdocs
+                  mirror --reverse --only-newer --delete --verbose \
+                    --exclude-glob .git/ \
+                    --exclude-glob .github/ \
+                    --exclude-glob README.md \
+                    ./ .
+
 
