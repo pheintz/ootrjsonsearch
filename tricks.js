@@ -19,22 +19,24 @@
  */
 
 const tricksJson = window.getTricks();
+const $searchResults = $('#search-results');
+const $searchInput = $('#search');
+
 
 $(document).ready(function () {
-    const uniqueValues = new Set();
+    const autoCompleteSet = new Set();
 
     tricksJson.tricks.forEach(trick => {
-        uniqueValues.add(trick.name.toLowerCase());
-        uniqueValues.add(trick.location.toLowerCase());
-        trick.items.forEach(item => uniqueValues.add(item.toLowerCase()));
+        autoCompleteSet.add(trick.name.toLowerCase());
+        autoCompleteSet.add(trick.location.toLowerCase());
+        trick.items.forEach(item => autoCompleteSet.add(item.toLowerCase()));
     });
 
-    const autocompleteValues = Array.from(uniqueValues);
+    const autocompleteValues = Array.from(autoCompleteSet);
 
     $('#search').autocomplete({
-        max: 5,
         source: function(request, response) {
-            var results = $.ui.autocomplete.filter(autocompleteValues, request.term);
+            let results = $.ui.autocomplete.filter(autocompleteValues, request.term);
             response(results.slice(0, 8));
         },
         select: function (event, ui) {
@@ -70,7 +72,7 @@ $(document).ready(function () {
                 let embed = CreateEmbedIframe(trick.embed);
                 return `
                     <div class="trick-card-container">
-                        <div class="trick-card">
+                        <article class="trick-card">
                             <h2>${trick.name}</h2>
                             <div class="description"><strong>How to do it:</strong> ${trick.description.replace(/\n/g, '<br>')}</div>
                             ${embed}
@@ -79,64 +81,60 @@ $(document).ready(function () {
                                 <div class="tag">${trick.location}</div>
                                 <div class="tag">${trick.age}</div>
                                 ${trick.items.map(item => `<div class="tag">${item}</div>`).join('')}
-                            </div>                        </div>
+                            </div>                        
+                        </article>
                     </div>
                 `;
             }).join('');
 
-            $('#search-results').html(resultsHtml || `<p>No results found for "${query}"</p>`);
+            $searchResults.html(resultsHtml || `<p>No results found for "${query}"</p>`);
 
             if (filters.size > 0) {
-                const activeTags = new Set();
-
-                $('.filter-button').click(function () {
-                    const filter = $(this).text().toLowerCase();
-
-                    if ($(this).hasClass('active')) {
-                        $(this).removeClass('active');
-                        activeTags.delete(filter);
-                    } else {
-                        $(this).addClass('active');
-                        activeTags.add(filter);
-                    }
-
-                    $('.trick-card-container').each(function () {
-                        const cardTags = $(this).find('.tag').map(function () {
-                            return $(this).text().toLowerCase();
-                        }).get();
-
-                        const matchesAll = Array.from(activeTags).every(tag => cardTags.includes(tag));
-
-                        if (activeTags.size === 0 || matchesAll) {
-                            $(this).show();
-                        } else {
-                            $(this).hide();
-                        }
-                    });
-                });
+                initFilterButtons();
             }
         }
     });
 });
 
 function CreateEmbedIframe(embedUrl) {
-    embedUrl = embedUrl.replace("shorts/", "embed/");
+    const isTwitch = embedUrl.includes("twitch.tv");
+    const parentParam = isTwitch ? "&parent=www.ootrjsonsearch.org" : "";
+    return `
+           <div class="video-container">
+               <iframe
+                   src="${embedUrl.replace("shorts/", "embed/")}${parentParam}"
+                   frameborder="0"
+                   allowfullscreen
+                   ${isTwitch ? 'scrolling="no"' : ''}
+                   ${!isTwitch ? 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"' : ''}>
+               </iframe>
+           </div>
+       `;
+}
 
-    if (embedUrl.includes("twitch.tv")) {
+function initFilterButtons() {
+    const activeTags = new Set();
+    $('.filter-button').click(function () {
+        const filter = $(this).text().toLowerCase();
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            activeTags.delete(filter);
+        } else {
+            $(this).addClass('active');
+            activeTags.add(filter);
+        }
+        $('.trick-card-container').each(function () {
+            const cardTags = $(this).find('.tag').map(function () {
+                return $(this).text().toLowerCase();
+            }).get();
 
-        return `
-        <div class="video-container">
-            <iframe src="${embedUrl}&parent=www.ootrjsonsearch.org" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
-         </div>
-        `
-    }
-    else if (embedUrl.includes("youtube")) {
-        return `<div class="video-container">
-            <iframe
-                src="${embedUrl}"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>`
-    }
+            const matchesAll = Array.from(activeTags).every(tag => cardTags.includes(tag));
+
+            if (activeTags.size === 0 || matchesAll) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
 }
