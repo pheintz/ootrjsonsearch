@@ -67,19 +67,13 @@ $(document).ready(function () {
             }
 
             resultsHtml += filteredTricks.map(trick => {
-                const embedUrl = trick.embed.replace("shorts/", "embed/");
+                let embed = CreateEmbedIframe(trick.embed);
                 return `
                     <div class="trick-card-container">
                         <div class="trick-card">
                             <h2>${trick.name}</h2>
                             <div class="description"><strong>How to do it:</strong> ${trick.description.replace(/\n/g, '<br>')}</div>
-                            <div class="video-container">
-                                <iframe
-                                    src="${embedUrl}" 
-                                    title="YouTube video player" 
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
+                            ${embed}
                            <div class="tags-container">
                                 <strong>Tags:</strong>
                                 <div class="tag">${trick.location}</div>
@@ -124,3 +118,25 @@ $(document).ready(function () {
         }
     });
 });
+
+function CreateEmbedIframe(embedUrl) {
+    embedUrl = embedUrl.replace("shorts/", "embed/");
+
+    if (embedUrl.includes("twitch.tv")) {
+
+        return `
+        <div class="video-container">
+            <iframe src="${embedUrl}&parent=www.ootrjsonsearch.org" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
+         </div>
+        `
+    }
+    else if (embedUrl.includes("youtube")) {
+        return `<div class="video-container">
+            <iframe
+                src="${embedUrl}"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>`
+    }
+}

@@ -425,7 +425,7 @@ window.getTricks = function getTricks() {
                 `,
                 "items": ["bombchu"],
                 "age": "child",
-                "embed": "https://clips.twitch.tv/embed?clip=FrigidDepressedTitanDoritosChip-yMZMygiNziiIz4e2&parent=https://ootrjsonsearch.org/",
+                "embed": "https://clips.twitch.tv/embed?clip=FrigidDepressedTitanDoritosChip-yMZMygiNziiIz4e2",
             }
         ]
     };
