@@ -426,7 +426,24 @@ window.getTricks = function getTricks() {
                 "items": ["bombchu"],
                 "age": "child",
                 "embed": "https://clips.twitch.tv/embed?clip=FrigidDepressedTitanDoritosChip-yMZMygiNziiIz4e2",
-            }
+            },
+            {
+                "name": "Door of Time Skip w/ Lunge Storage",
+                "location": "Temple of Time",
+                "description": `inputs for lunge storage:
+                                crouch stab
+                                Z+A+R (jumpslash with shield landing)
+                                let go of everything
+                                (input out of unpause or on the same frame) UP + B
+                                go to door, sidehop left, roll+retarget for angle
+                                roll into corner.
+                                while holding z. sidehop right, roll, sidehop right, sidehop left
+                                b+r unsheath, 1ess right, jumpslash
+                `,
+                "items": ["kokiri sword"],
+                "age": "child",
+                "embed": "https://www.youtube.com/embed/XV1Bdq0MXNQ",
+            },
         ]
     };
 }
