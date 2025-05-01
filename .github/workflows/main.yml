@@ -38,5 +38,6 @@ jobs:
           max_retries: 3
           script: |
             cd /ootrjsonsearch.org/htdocs
-            set mirror:exclude-regex "^\..*|^\.git|^\.github|^\.gitignore|^README\.md$"
-            mirror --reverse --only-newer --delete --verbose .
+            set mirror:exclude-regex "^\..*|^README\.md$"
+            mirror --reverse --only-newer --delete --verbose ./ .
+
