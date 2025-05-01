@@ -1,4 +1,4 @@
-name: Simple FTP Upload
+name: FTP and JS Versioning
 
 on:
   push:
@@ -11,6 +11,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      - name: Set timestamp as version
+        id: version
+        run: echo "VERSION=$(date +%s)" >> $GITHUB_ENV
+
+      - name: Replace version placeholder in HTML files
+        run: |
+          find . -name "*.html" -exec sed -i "s/<!-- VERSION -->/${{ env.VERSION }}/g" {} \;
 
       - name: FTP Upload to ftpupload.net
         uses: pontago/lftp-deploy-action@v1.0.1
@@ -29,9 +37,6 @@ jobs:
           timeout: 30
           max_retries: 3
           script: |
-            # Change to the target remote directory
             cd /ootrjsonsearch.org/htdocs
-            # Exclude hidden folders (e.g., .git, .github) and specific files (.gitignore, README.md)
             set mirror:exclude-regex "^\..*|^\.git|^\.github|^\.gitignore|^README\.md$"
-            # Upload files to the correct remote directory
             mirror --reverse --only-newer --delete --verbose .
