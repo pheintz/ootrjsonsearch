@@ -418,6 +418,15 @@ window.getTricks = function getTricks() {
                 "embed": "https://youtube.com/embed/UtxxHi8Ox0s",
                 "credit": ""
             },
+            {
+                "name": "Child Light Trial Block Skip",
+                "location": "Ganon's Castle",
+                "description": `
+                `,
+                "items": ["bombchu"],
+                "age": "child",
+                "embed": "https://clips.twitch.tv/embed?clip=FrigidDepressedTitanDoritosChip-yMZMygiNziiIz4e2&parent=https://ootrjsonsearch.org/",
+            }
         ]
     };
 }
