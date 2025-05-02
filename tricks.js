@@ -35,71 +35,80 @@ $(document).ready(function () {
     const autocompleteValues = Array.from(autoCompleteSet);
 
     $('#search').autocomplete({
-        source: function(request, response) {
+        source: function (request, response) {
             let results = $.ui.autocomplete.filter(autocompleteValues, request.term);
             response(results.slice(0, 8));
         },
         select: function (event, ui) {
-            const query = ui.item.value.toLowerCase();
-            const filteredTricks = tricksJson.tricks.filter(trick =>
-                trick.name.toLowerCase() === query ||
-                trick.location.toLowerCase() === query ||
-                trick.items.map(item => item.toLowerCase()).includes(query)
-            );
-
-            let resultsHtml = "";
-            const filters = new Set();
-
-            filteredTricks.forEach(trick => {
-                trick.items.forEach(item => filters.add(item.toLowerCase()));
-                if (trick.location) {
-                    filters.add(trick.location.toLowerCase());
-                }
-                if (trick.age) {
-                    filters.add(trick.age.toLowerCase());
-                }
-            });
-
-            if (filters.size > 0) {
-                resultsHtml += `<div class='filter-container'>`;
-                filters.forEach(filter => {
-                    resultsHtml += `<div class="filter-button">${filter}</div>`;
-                });
-                resultsHtml += `</div>`;
-            }
-
-            resultsHtml += filteredTricks.map(trick => {
-                let embed = CreateEmbedIframe(trick.embed);
-                return `
-                    <div class="trick-card-container">
-                        <article class="trick-card">
-                            <h2>${trick.name}</h2>
-                            <div class="description"><strong>How to do it:</strong> ${trick.description.replace(/\n/g, '<br>')}</div>
-                            ${embed}
-                           <div class="tags-container">
-                                <strong>Tags:</strong>
-                                <div class="tag">${trick.location}</div>
-                                <div class="tag">${trick.age}</div>
-                                ${trick.items.map(item => `<div class="tag">${item}</div>`).join('')}
-                            </div>                        
-                        </article>
-                    </div>
-                `;
-            }).join('');
-
-            $searchResults.html(resultsHtml || `<p>No results found for "${query}"</p>`);
-
-            if (filters.size > 0) {
-                initFilterButtons();
-            }
+            handleSearch(ui.item.value.toLowerCase());
         }
     });
-});
 
-function CreateEmbedIframe(embedUrl) {
-    const isTwitch = embedUrl.includes("twitch.tv");
-    const parentParam = isTwitch ? "&parent=www.ootrjsonsearch.org" : "";
-    return `
+    $('#search').keypress(function (event) {
+        if (event.key === "Enter") {
+            const query = $(this).val().toLowerCase();
+            handleSearch(query);
+        }
+    });
+
+    function handleSearch(query) {
+        const filteredTricks = tricksJson.tricks.filter(trick =>
+            trick.name.toLowerCase().includes(query) ||
+            trick.location.toLowerCase().includes(query) ||
+            trick.items.some(item => item.toLowerCase().includes(query))
+        );
+
+        let resultsHtml = "";
+        const filters = new Set();
+
+        filteredTricks.forEach(trick => {
+            trick.items.forEach(item => filters.add(item.toLowerCase()));
+            if (trick.location) {
+                filters.add(trick.location.toLowerCase());
+            }
+            if (trick.age) {
+                filters.add(trick.age.toLowerCase());
+            }
+        });
+
+        if (filters.size > 0) {
+            resultsHtml += `<div class='filter-container'>`;
+            filters.forEach(filter => {
+                resultsHtml += `<div class="filter-button">${filter}</div>`;
+            });
+            resultsHtml += `</div>`;
+        }
+
+        resultsHtml += filteredTricks.map(trick => {
+            let embed = CreateEmbedIframe(trick.embed);
+            return `
+            <div class="trick-card-container">
+                <article class="trick-card">
+                    <h2>${trick.name}</h2>
+                    <div class="description"><strong>How to do it:</strong> ${trick.description.replace(/\n/g, '<br>')}</div>
+                    ${embed}
+                    <div class="tags-container">
+                        <strong>Tags:</strong>
+                        <div class="tag">${trick.location}</div>
+                        <div class="tag">${trick.age}</div>
+                        ${trick.items.map(item => `<div class="tag">${item}</div>`).join('')}
+                    </div>
+                </article>
+            </div>
+        `;
+        }).join('');
+
+        $searchResults.html(resultsHtml || `<p>No results found for "${query}"</p>`);
+
+        if (filters.size > 0) {
+            initFilterButtons();
+        }
+    }
+
+    function CreateEmbedIframe(embedUrl) {
+        const isTwitch = embedUrl.includes("twitch.tv");
+        const parentParam = isTwitch ? "&parent=www.ootrjsonsearch.org" : "";
+        return `
            <div class="video-container">
                <iframe
                    src="${embedUrl.replace("shorts/", "embed/")}${parentParam}"
@@ -110,31 +119,33 @@ function CreateEmbedIframe(embedUrl) {
                </iframe>
            </div>
        `;
-}
+    }
 
-function initFilterButtons() {
-    const activeTags = new Set();
-    $('.filter-button').click(function () {
-        const filter = $(this).text().toLowerCase();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            activeTags.delete(filter);
-        } else {
-            $(this).addClass('active');
-            activeTags.add(filter);
-        }
-        $('.trick-card-container').each(function () {
-            const cardTags = $(this).find('.tag').map(function () {
-                return $(this).text().toLowerCase();
-            }).get();
-
-            const matchesAll = Array.from(activeTags).every(tag => cardTags.includes(tag));
-
-            if (activeTags.size === 0 || matchesAll) {
-                $(this).show();
+    function initFilterButtons() {
+        const activeTags = new Set();
+        $('.filter-button').click(function () {
+            const filter = $(this).text().toLowerCase();
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                activeTags.delete(filter);
             } else {
-                $(this).hide();
+                $(this).addClass('active');
+                activeTags.add(filter);
             }
+            $('.trick-card-container').each(function () {
+                const cardTags = $(this).find('.tag').map(function () {
+                    return $(this).text().toLowerCase();
+                }).get();
+
+                const matchesAll = Array.from(activeTags).every(tag => cardTags.includes(tag));
+
+                if (activeTags.size === 0 || matchesAll) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
         });
-    });
-}
+
+    }
+});
