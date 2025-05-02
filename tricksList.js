@@ -2,6 +2,49 @@ window.getTricks = function getTricks() {
     return {
         "tricks": [
             {
+                "name": "Bomb QPA Hover Into Forest",
+                "location": "Sacred Forest Meadow",
+                "description": `get QPA and ISG (see: "Adult Stick Nut QPA"))
+                                get into corner
+                                3 sidehop left and roll with target held
+                                turn right. 4 sidehops right, turn left, 2 ess left
+                                9 bomb hovers, backflip, jump to main ledge
+                `,
+                "items": ["2HW", "1HW", "bombs"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/mZ41KgN2TF8",
+                "credit": ""
+            },
+            {
+                "name": "Adult Stick Nut QPA",
+                "location": "Sacred Forest Meadow",
+                "description": `target wall
+                                backflip sidehop right
+                                roll+retarget, 2ess right
+                                walk left against wall
+                                frame 1: put away
+                                frame 2: deku nut
+                                jumpslash
+                                if your stick breaks you have glitched damage value
+                `,
+                "items": ["2HW", "1HW", "bombs"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/C5gYslOuxlU",
+                "credit": ""
+            },
+            {
+                "name": "GTG Gate Clip Bombs",
+                "location": "Gerudo Training Grounds",
+                "description": `go into corner. A drop bomb get on fence and climb sideways one over into the corner
+                                to clip right: hold right on big red
+                                to clip left: hold left on first explosion frame
+                `,
+                "items": ["bombs"],
+                "age": "any age",
+                "embed": "https://youtube.com/embed/k-oAPiO8mPM",
+                "credit": ""
+            },
+            {
                 "name": "Deku Adult BK Skip",
                 "location": "deku tree",
                 "description": "Align with wall, turn around,hold z forever: hop to corner, left sidehop 2x, backflip, walk forward max speed. Drop then pull stick+jumpslash on 4th frame or sword immediately.",
