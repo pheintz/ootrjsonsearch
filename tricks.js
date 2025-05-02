@@ -107,7 +107,7 @@ $(document).ready(function () {
 
     function CreateEmbedIframe(embedUrl) {
         const isTwitch = embedUrl.includes("twitch.tv");
-        const parentParam = isTwitch ? "&parent=www.ootrjsonsearch.org" : "";
+        const parentParam = isTwitch ? "&parent=ootrjsonsearch.org" : "";
         return `
            <div class="video-container">
                <iframe
