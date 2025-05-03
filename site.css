@@ -8,6 +8,7 @@
     --input-border-color: #292929;
     --hover-color: #333333;
     --result-highlight: #212121;
+    --input-action: #66BB6A;
 }
 
 body {
@@ -415,4 +416,115 @@ svg {
         background-color: var(--result-highlight) !important;
         color: var(--text-color);
         border-color: transparent;
+    }
+
+.trick-icon {
+    stroke: var(--text-color);
+    width: 24px;
+    height: 24px;
+    margin: 0px 8px 0px 8px;
+}
+    .trick-icon:hover {
+        cursor: pointer;
+    }
+    .link-icon:hover{
+       fill: var(--primary-color);
+       transition: fill 0.3s ease;
+    }
+
+.share-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #222;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    padding: 24px;
+    z-index: 10000;
+    max-width: 600px;
+    width: 90%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+    .share-popup h3 {
+        margin-top: 0;
+    }
+
+.popup-close-x {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+input.share-url-input {
+    margin: 15px 0;
+    border: none;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--input-border-color)
+}
+
+.popup-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.copy-btn {
+    background: var(--input-action);
+    color: white;
+}
+
+.close-btn {
+    background: #636e72;
+    color: white;
+}
+
+.trick-header {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--input-action);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: none;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+    .notification.show {
+        display: block;
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .notification.hide {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
     }

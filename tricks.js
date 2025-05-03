@@ -21,6 +21,7 @@
 const tricksJson = window.getTricks();
 const $searchResults = $('#search-results');
 const $searchInput = $('#search');
+const baseShareUrl = window.location.href.split('?')[0] + '?trick=';
 
 
 $(document).ready(function () {
@@ -43,7 +44,6 @@ $(document).ready(function () {
             handleSearch(ui.item.value.toLowerCase());
         }
     });
-
     $('#search').keypress(function (event) {
         if (event.key === "Enter") {
             const query = $(this).val().toLowerCase();
@@ -51,59 +51,35 @@ $(document).ready(function () {
         }
     });
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const trickParam = urlParams.get('trick');
+    if (trickParam) {
+        handleSearch(trickParam.toLowerCase());
+    }
+
     function handleSearch(query) {
-        const filteredTricks = tricksJson.tricks.filter(trick =>
-            trick.name.toLowerCase().includes(query) ||
-            trick.location.toLowerCase().includes(query) ||
-            trick.items.some(item => item.toLowerCase().includes(query))
-        );
+        const filteredTricks = filterTricks(query);
+        const filters = extractFilters(filteredTricks);
 
-        let resultsHtml = "";
-        const filters = new Set();
-
-        filteredTricks.forEach(trick => {
-            trick.items.forEach(item => filters.add(item.toLowerCase()));
-            if (trick.location) {
-                filters.add(trick.location.toLowerCase());
-            }
-            if (trick.age) {
-                filters.add(trick.age.toLowerCase());
-            }
-        });
+        const htmlParts = [];
 
         if (filters.size > 0) {
-            resultsHtml += `<div class='filter-container'>`;
-            filters.forEach(filter => {
-                resultsHtml += `<div class="filter-button">${filter}</div>`;
-            });
-            resultsHtml += `</div>`;
+            htmlParts.push(renderFilters(filters));
         }
 
-        resultsHtml += filteredTricks.map(trick => {
-            let embed = CreateEmbedIframe(trick.embed);
-            return `
-            <div class="trick-card-container">
-                <article class="trick-card">
-                    <h2>${trick.name}</h2>
-                    <div class="description"><strong>How to do it:</strong> ${trick.description.replace(/\n/g, '<br>')}</div>
-                    ${embed}
-                    <div class="tags-container">
-                        <strong>Tags:</strong>
-                        <div class="tag">${trick.location}</div>
-                        <div class="tag">${trick.age}</div>
-                        ${trick.items.map(item => `<div class="tag">${item}</div>`).join('')}
-                    </div>
-                </article>
-            </div>
-        `;
-        }).join('');
+        if (filteredTricks.length > 0) {
+            htmlParts.push(renderTrickCards(filteredTricks));
+        }
 
+        const resultsHtml = htmlParts.join('');
         $searchResults.html(resultsHtml || `<p>No results found for "${query}"</p>`);
 
-        if (filters.size > 0) {
+        if (filteredTricks.length > 0) {
             initFilterButtons();
+            bindShareButtons(); // bind click events on .trick-icon
         }
     }
+
 
     function CreateEmbedIframe(embedUrl) {
         const isTwitch = embedUrl.includes("twitch.tv");
@@ -146,6 +122,68 @@ $(document).ready(function () {
                 }
             });
         });
+    }
+    function filterTricks(query) {
+        const lowerQuery = query.toLowerCase();
+        return tricksJson.tricks.filter(trick =>
+            trick.name.toLowerCase().includes(lowerQuery) ||
+            trick.location.toLowerCase().includes(lowerQuery) ||
+            trick.items.some(item => item.toLowerCase().includes(lowerQuery))
+        );
+    }
 
+    function extractFilters(tricks) {
+        const filters = new Set();
+        tricks.forEach(trick => {
+            trick.items.forEach(item => filters.add(item.toLowerCase()));
+            if (trick.location) filters.add(trick.location.toLowerCase());
+            if (trick.age) filters.add(trick.age.toLowerCase());
+        });
+        return filters;
+    }
+
+    function renderFilters(filters) {
+        let html = `<div class='filter-container'>`;
+        filters.forEach(filter => {
+            html += `<div class="filter-button">${filter}</div>`;
+        });
+        html += `</div>`;
+        return html;
+    }
+
+    function renderTrickCards(tricks) {
+        return tricks.map(trick => {
+            const embed = CreateEmbedIframe(trick.embed);
+            const shareUrl = `${baseShareUrl}${encodeURIComponent(trick.name)}`;
+
+            return `
+        <div class="trick-card-container">
+            <article class="trick-card">
+                <h2 class="trick-header">
+                    ${trick.name}
+                    <img class="trick-icon" src="../img/copy-link.svg" data-url="${shareUrl}" title="Copy Share Link" />
+                </h2>
+                <div class="description"><strong>How to do it:</strong> ${trick.description.replace(/\n/g, '<br>')}</div>
+                ${embed}
+                <div class="tags-container">
+                    <strong>Tags:</strong>
+                    <div class="tag">${trick.location}</div>
+                    <div class="tag">${trick.age}</div>
+                    ${trick.items.map(item => `<div class="tag">${item}</div>`).join('')}
+                </div>
+            </article>
+        </div>
+        `;
+        }).join('');
+    }
+
+    function bindShareButtons() {
+        document.querySelectorAll('.trick-icon').forEach(icon => {
+            icon.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const url = icon.getAttribute('data-url');
+                if (url) ShareModule.show(url);
+            });
+        });
     }
 });
