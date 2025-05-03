@@ -2,6 +2,26 @@ window.getTricks = function getTricks() {
     return {
         "tricks": [
             {
+                "name": "Child Statue Climb From Child Side",
+                "location": "Spirit Temple",
+                "description": `
+                    Ailgn with wall, ess left, backflip, roll retarget for angle, roll into corner
+                    with z held 4x backflip, roll, 2x left sidehop, roll, left sidehop, roll and release z
+                    with z held 4x left sidehop, roll, left sidehop
+                    retarget, roll, left sidehop
+                    retarget, roll, 1ess right
+
+                    hold z the rest of the time 
+                    roll, up+roll
+                    hold up until the frame where link is obviously coming down (frame after link's foot is parallel with the ground)
+                    from unpause, pull stick and hold left until frame where links stick is pointing forward 
+                    if you're paused on that frame jumpslash out of the unpause with no control stick inputs`,
+                "items": ["2HW"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/TiTWNFPGImA",
+                "credit": ""
+            },
+            {
                 "name": "Bomb QPA Hover Into Forest",
                 "location": "Sacred Forest Meadow",
                 "description": `get QPA and ISG (see: "Adult Stick Nut QPA"))
