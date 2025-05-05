@@ -2,6 +2,36 @@ window.getTricks = function getTricks() {
     return {
         "tricks": [
             {
+                "name": "Enter Jabu As Adult w/ Bombchu",
+                "location": "Zora's Fountain",
+                "description": `
+                                get isg
+                                get into corner
+                                2x backflip, roll + retarget
+                                left sidehop, roll + retarget
+                                right sidehop, no retarget + roll
+                                walk forward (up notch) until link stops at the ledge
+
+                                9th red out of pause: Z+R+A+Right, let go of right until landing
+                                hold, not quite up-right notch, up a little more, X value in the 30s (see note)
+
+                                while holding angle, on 8th black chu: R+Right out of unpause and hold the inputs
+                                buffer 4 frames (on 4th frame links shield moves to the right)
+                                On 4th frame: R+A with no stick input.
+
+                                During the roll: keep holding R. watch for explosion frame 
+                                1st frame: you will see the hilt of link's sword clearly sticking out
+                                2nd frame: bigger explosion, hilt no longer visible
+                                On this frame: Z+R+A+Left and unpause and let link go
+
+                                note: (ship setting on input viewer: analog angle values or dev tools: value viewer)
+                `,
+                "items": ["bombchu"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/xDLnTnV9UcY",
+                "credit": ""
+            },
+            {
                 "name": "Child Statue Climb From Child Side",
                 "location": "Spirit Temple",
                 "description": `
