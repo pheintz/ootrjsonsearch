@@ -39,9 +39,8 @@ jobs:
           script: |
               cd /ootrjsonsearch.org/htdocs
               mirror --reverse --only-newer --delete --verbose \
-                --exclude ^\.git/ \
-                --exclude ^\.github/ \
-                --exclude ^README\.md$ \
+                --exclude "^\\..*/" \
+                --exclude "^\\..*$" \
                 ./ .
 
 
