@@ -8,6 +8,7 @@ on:
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -21,29 +22,15 @@ jobs:
           find . -name "*.html" -exec sed -i "s/<!-- VERSION -->/${{ env.VERSION }}/g" {} \;
 
       - name: FTP Upload to ftpupload.net
-        uses: pontago/lftp-deploy-action@v1.0.1
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          host: ${{ secrets.FTP_HOST }}
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: "21"
-          protocol: "ftp"
-          local_dir: "."
-          remote_dir: "/ootrjsonsearch.org/htdocs"
-          create_remote_dir: true
-          verify_cert: true
-          dry_run: false
-          debug: false
-          timeout: 30
-          max_retries: 3
-          script: |
-            cd /ootrjsonsearch.org/htdocs
-            mirror --reverse --only-newer --delete --verbose \
-                --exclude-glob '.*' \
-                --exclude-glob '.*/**' \
-                ./ .
-
-
-
-
-
+          protocol: ftp
+          port: 21
+          local-dir: .
+          server-dir: /ootrjsonsearch.org/htdocs
+          exclude: |
+            **/.*
+            **/.*/**
