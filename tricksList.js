@@ -2,6 +2,45 @@ window.getTricks = function getTricks() {
     return {
         "tricks": [
             {
+                "name": "Child Shadow Temple Gate Clip",
+                "location": "Shadow Temple",
+                "description": `
+                                (see video) get into corner in pit and align
+                                turn around,  2 ess left, backflip, shield scoot
+                                if you want to buffer shield scoot it's 3 frames unshielded
+                                turn right, 2x jumpslash
+                                `,
+                "items": ["deku sticks"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/tFbHGK8Wl6c",
+                "credit": ""
+            },
+            {
+                "name": "Child Water Temple Entry Superslide",
+                "location": "Lake Hylia",
+                "description": `
+                                Align as shown.
+                                Legs between blade of grass, glitch tick on the brick line
+                                1 Roll, turn right
+                                Chu on 8th black
+                                frames
+                                1 Z+R
+                                2-4 right on stick
+                                5 right+A
+                                6.... Z+R+Mash A
+                                When links head is below the bush release R
+                                Swim under bushes turn right and realign camera
+                                10 swims (without B) just left of the left pillar
+                                A and dive up+right
+
+                                note: won't work if you have any strength upgrades
+                `,
+                "items": ["bombchu"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/_1fHdyn595U",
+                "credit": ""
+            },
+            {
                 "name": "Enter Jabu As Adult w/ Bombchu",
                 "location": "Zora's Fountain",
                 "description": `
