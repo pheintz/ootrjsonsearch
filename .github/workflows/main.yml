@@ -37,11 +37,12 @@ jobs:
           timeout: 30
           max_retries: 3
           script: |
-              cd /ootrjsonsearch.org/htdocs
-              mirror --reverse --only-newer --delete --verbose \
-                --exclude "^\\..*/" \
-                --exclude "^\\..*$" \
+            cd /ootrjsonsearch.org/htdocs
+            mirror --reverse --only-newer --delete --verbose \
+                --exclude-glob '.*' \
+                --exclude-glob '.*/**' \
                 ./ .
+
 
 
 
