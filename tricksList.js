@@ -2,6 +2,64 @@ window.getTricks = function getTricks() {
     return {
         "tricks": [
             {
+                "name": "Adult LH to ZD Bombchu Dive",
+                "location": "Lake Hylia",
+                "description": `
+                                climb up
+                                2 ess right
+                                backflip
+                                turn around
+                                3x hold up while rolling
+                                for chus: roll, backflip, shieldflick, megaflip
+                                hold left in the air
+
+                                *for bombs: shield drop bomb, roll, backflip, megaflip
+                                `,
+                "items": ["bombchu"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/G6XVwXbBo8s",
+                "credit": ""
+            },
+            {
+                "name": "Water Temple BK Skip Bombchu",
+                "location": "Water Temple",
+                "description": `
+                                get isg
+                                face the right pillar
+                                turn right, sidehop right, turn right
+                                sidehop right, on 2nd frame of sidehop shielddrop chu (keep holding Z+R)
+                                on the frame link touches the ground, Z+R+Backflip
+                                on the frame link 'freezes' in the air (shield will rotate left a bit) release all inputs
+                                once upright, shield drop chu (Z+R+Bombchu)
+                                3 frames later hold shield and backflip
+                                shield drop chu on 8th red, swing/unsheath on 1st explosion frame
+                                `,
+                "items": ["bombchu"],
+                "age": "any age",
+                "embed": "https://youtube.com/embed/pHanWnYieYc",
+                "credit": ""
+            },
+            {
+                "name": "Spirit Temple BK Skip Bombchu",
+                "location": "Spirit Temple",
+                "description": `
+                                Get ISG off boss door, face the center lock,
+                                turn right, sidehop right, turn left,
+                                hold target and shield drop a bombchu on the 9th red
+                                release target and shield and hold down
+                                when link is facing the camera (2 frames), release down and hold target and shield
+                                (keep Z+R) when camera has centered behind link (4 frames), backflip out of the unpause
+                                when link’s legs are sticking up, release target and shield
+                                once upright, shield drop a chu (Z+R+Bombchu)
+                                3 frames later hold shield and backflip,
+                                refocus camera, shield drop chu on 8th red, swing/unsheath on 1st explosion frame
+                                `,
+                "items": ["bombchu"],
+                "age": "any age",
+                "embed": "https://youtube.com/embed/HdzPVbpwoEI",
+                "credit": ""
+            },
+            {
                 "name": "Child Shadow Temple Gate Clip",
                 "location": "Shadow Temple",
                 "description": `
