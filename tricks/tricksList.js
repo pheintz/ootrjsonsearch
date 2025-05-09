@@ -15,7 +15,7 @@ window.getTricks = function getTricks() {
 
                                 *for bombs: shield drop bomb, roll, backflip, megaflip
                                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/G6XVwXbBo8s",
                 "credit": ""
@@ -34,7 +34,7 @@ window.getTricks = function getTricks() {
                                 3 frames later hold shield and backflip
                                 shield drop chu on 8th red, swing/unsheath on 1st explosion frame
                                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu", "BK Skip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/pHanWnYieYc",
                 "credit": ""
@@ -54,7 +54,7 @@ window.getTricks = function getTricks() {
                                 3 frames later hold shield and backflip,
                                 refocus camera, shield drop chu on 8th red, swing/unsheath on 1st explosion frame
                                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu", "BK Skip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/HdzPVbpwoEI",
                 "credit": ""
@@ -68,7 +68,7 @@ window.getTricks = function getTricks() {
                                 if you want to buffer shield scoot it's 3 frames unshielded
                                 turn right, 2x jumpslash
                                 `,
-                "items": ["deku sticks"],
+                "tags": ["deku sticks"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/tFbHGK8Wl6c",
                 "credit": ""
@@ -93,7 +93,7 @@ window.getTricks = function getTricks() {
 
                                 note: won't work if you have any strength upgrades
                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu", "superslide"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/_1fHdyn595U",
                 "credit": ""
@@ -123,7 +123,7 @@ window.getTricks = function getTricks() {
 
                                 note: (ship setting on input viewer: analog angle values or dev tools: value viewer)
                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/xDLnTnV9UcY",
                 "credit": ""
@@ -143,7 +143,7 @@ window.getTricks = function getTricks() {
                     hold up until the frame where link is obviously coming down (frame after link's foot is parallel with the ground)
                     from unpause, pull stick and hold left until frame where links stick is pointing forward 
                     if you're paused on that frame jumpslash out of the unpause with no control stick inputs`,
-                "items": ["2HW"],
+                "tags": ["2HW"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/TiTWNFPGImA",
                 "credit": ""
@@ -157,13 +157,13 @@ window.getTricks = function getTricks() {
                                 turn right. 4 sidehops right, turn left, 2 ess left
                                 9 bomb hovers, backflip, jump to main ledge
                 `,
-                "items": ["2HW", "1HW", "bombs"],
+                "tags": ["2HW", "1HW", "bombs"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/mZ41KgN2TF8",
                 "credit": ""
             },
             {
-                "name": "Adult Stick Nut QPA",
+                "name": "Adult Stick Nut QPA (Quick Putaway)",
                 "location": "Sacred Forest Meadow",
                 "description": `target wall
                                 backflip sidehop right
@@ -174,7 +174,7 @@ window.getTricks = function getTricks() {
                                 jumpslash
                                 if your stick breaks you have glitched damage value
                 `,
-                "items": ["2HW", "1HW", "bombs"],
+                "tags": ["2HW", "1HW", "bombs"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/C5gYslOuxlU",
                 "credit": ""
@@ -186,16 +186,20 @@ window.getTricks = function getTricks() {
                                 to clip right: hold right on big red
                                 to clip left: hold left on first explosion frame
                 `,
-                "items": ["bombs"],
+                "tags": ["bombs", "gate clip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/k-oAPiO8mPM",
                 "credit": ""
             },
             {
-                "name": "Deku Adult BK Skip",
+                "name": "Deku Adult BK (231) Skip",
                 "location": "deku tree",
-                "description": "Align with wall, turn around,hold z forever: hop to corner, left sidehop 2x, backflip, walk forward max speed. Drop then pull stick+jumpslash on 4th frame or sword immediately.",
-                "items": ["2HW", "1HW"],
+                "description": `
+                    Align with wall, turn around,
+                    hold z forever:
+                    hop to corner, left sidehop 2x, backflip, walk forward max speed.
+                    A to drop then pull stick+jumpslash on 4th frame or sword immediately.`,
+                "tags": ["2HW", "1HW", "BK Skip"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/embed/4jmnz6FM3kU",
                 "credit": ""
@@ -204,7 +208,7 @@ window.getTricks = function getTricks() {
                 "name": "Enter Closed Deku As Adult",
                 "location": "kokiri forest",
                 "description": "",
-                "items": ["hover boots", "bombs"],
+                "tags": ["hover boots", "bombs"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/shorts/L6R4GkOsHYM",
                 "credit": "https://www.youtube.com/@JBurtonGaming"
@@ -213,7 +217,7 @@ window.getTricks = function getTricks() {
                 "name": "Deku Tree B1 Skip",
                 "location": "deku tree",
                 "description": "",
-                "items": ["itemless"],
+                "tags": ["itemless"],
                 "age": "child",
                 "embed": "https://www.youtube.com/shorts/TEAxY97Y0c0",
                 "credit": "https://www.youtube.com/@LinksterGames/"
@@ -221,8 +225,12 @@ window.getTricks = function getTricks() {
             {
                 "name": "Dodongo Eyes Early Boss Bombchu",
                 "location": "dodongo's cavern",
-                "description": "",
-                "items": ["bombchu"],
+                "description": `
+                                get into corner
+                                backflip, roll, turn left
+                                for 1st eye shield drop instantly
+                                2nd eye shield drop around 2nd red`,
+                "tags": ["bombchu"],
                 "age": "any age",
                 "embed": "",
                 "credit": ""
@@ -231,7 +239,7 @@ window.getTricks = function getTricks() {
                 "name": "Jabu Blue Switch Child Skip",
                 "location": "jabu's belly",
                 "description": "",
-                "items": ["deku sticks"],
+                "tags": ["deku sticks"],
                 "age": "child",
                 "embed": "https://www.youtube.com/shorts/cUw1sdlqUFA",
                 "credit": ""
@@ -242,7 +250,7 @@ window.getTricks = function getTricks() {
                 "description": `frame to open door is first frame link's hand is off the ground, leaning left
                                 no need to hold z at any point
                                 buffer A-button on the final unpause`,
-                "items": ["itemless"],
+                "tags": ["itemless"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/embed/G9cNyW5K8Vc",
                 "credit": ""
@@ -255,7 +263,7 @@ window.getTricks = function getTricks() {
                                 Frame 0: A+Z+R
                                 Frame 1: Z+R+Hold down the entire rest of the way
                                 On the 2nd frame that link is entirely inside the explosion: A+Z+R+Down`,
-                "items": ["bombs"],
+                "tags": ["bombs", "megaflip"],
                 "age": "any age",
                 "embed": "https://www.youtube.com/embed/T7A5vm4iXJw",
                 "credit": ""
@@ -264,7 +272,7 @@ window.getTricks = function getTricks() {
                 "name": "Lost Woods Aqua Escape",
                 "location": "lost woods",
                 "description": "Target around texture shown, 1 ess right, Sidehop left, Backflip, (Slash stick and sidehop)for position, time jumpslash to clip",
-                "items": ["1hw", "2hw"],
+                "tags": ["1hw", "2hw"],
                 "age": "child",
                 "embed": "https://www.youtube.com/embed/D3RSZ1WyB5A",
                 "credit": "https://www.youtube.com/@StoneeBadLuck"
@@ -273,7 +281,7 @@ window.getTricks = function getTricks() {
                 "name": "Child Forest Temple BK Skip bombchu",
                 "location": "Forest Temple",
                 "description": "hold z the whole time: one frame a+down, one frame down on control stick, one frame shield (hold the rest of the way), one frame chu pull,  z+r+up the rest of the way",
-                "items": ["bombchu"],
+                "tags": ["bombchu", "BK Skip", "vine clip"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/f0l6W0blyUw",
                 "credit": ""
@@ -281,8 +289,12 @@ window.getTricks = function getTricks() {
             {
                 "name": "Forest Temple Mega Backflip to Scarecrow",
                 "location": "Forest Temple",
-                "description": "",
-                "items": ["bombchu"],
+                "description": `get in corner next to switch, 
+                                turn around and walk forward to climb up railing
+                                turn right and sidestep until links right heel is touching the railing
+                                c-up to line up backflip landing zone
+                                turn around and megaflip`,
+                "tags": ["bombchu", "megaflip"],
                 "age": "any age",
                 "embed": "https://youtube.com/emvbed/dVfhIBN8Q7E",
                 "credit": ""
@@ -291,7 +303,7 @@ window.getTricks = function getTricks() {
                 "name": "Skip First Key in Forest Temple",
                 "location": "Forest Temple",
                 "description": "",
-                "items": ["bombchu", "hover boots"],
+                "tags": ["bombchu", "hover boots"],
                 "age": "adult",
                 "embed": "https://youtube.com/shorts/MqgM5zs8Xdc",
                 "credit": "https://www.youtube.com/@JBurtonGaming"
@@ -300,7 +312,7 @@ window.getTricks = function getTricks() {
                 "name": "Forest Temple First Green Block Skip",
                 "location": "Forest Temple",
                 "description": "sidehop, roll, get into corner, crouchstab 2x, jumpslash",
-                "items": ["1HW", "2HW"],
+                "tags": ["1HW", "2HW"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/xqUVH-3T9Nw",
                 "credit": ""
@@ -308,8 +320,8 @@ window.getTricks = function getTricks() {
             {
                 "name": "Forest Temple Block Room to Courtyard",
                 "location": "Forest Temple",
-                "description": "",
-                "items": ["1HW", "2HW"],
+                "description": "Align glitch tick w/ texture shown and jumpslash",
+                "tags": ["1HW", "2HW"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/KW9U3UyDZr4",
                 "credit": ""
@@ -319,7 +331,7 @@ window.getTricks = function getTricks() {
                 "location": "Fire Temple",
                 "description": `see: "How To Weirdshot"
                 `,
-                "items": ["hookshot"],
+                "tags": ["hookshot", "weirdshot"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/embed/IPpPgkgMnPw",
                 "credit": ""
@@ -335,16 +347,16 @@ window.getTricks = function getTricks() {
                 (see video, but a few frames worked for me for the jumpslash)
                 get link's head in the wall as much as you can, then backflip
                 `,
-                "items": ["hookshot"],
+                "tags": ["bombs"],
                 "age": "child",
                 "embed": "https://www.youtube.com/embed/9llUpjaAUrI",
                 "credit": ""
             },
             {
-                "name": "Spirit/Water Temple Boss Key Bombs Skip",
+                "name": "Spirit/Water Temple Bombs BK Skip",
                 "location": "Spirit Temple",
                 "description": `Get ISG on door. Z target door. (drop as fast as you can) Shield drop sidehop shield drop. Backflip on big blue then backflip again. Pull bomb and press a to drop. If 2handed weapon pull out. On big red either unsheath or swing your two hander.`,
-                "items": ["bombs"],
+                "tags": ["bombs", "BK Skip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/GJOHtcVqUQg",
                 "credit": ""
@@ -358,7 +370,7 @@ window.getTricks = function getTricks() {
                             when stick starts burning out, hold left and walk off the edge
                             jumpslash on first frame the top link's head is below the ledge
                 `,
-                "items": ["bombs"],
+                "tags": ["bombs"],
                 "age": "any age",
                 "embed": "https://www.youtube.com/embed/kqV5v6fUIuk",
                 "credit": ""
@@ -376,7 +388,7 @@ window.getTricks = function getTricks() {
                                 climb up and turn right. run forward and jump forward and slightly to the right
                                 Roll foward and target until you align with the boss door
                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu", "BK Skip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/G8ASlsOYLak",
                 "credit": ""
@@ -391,7 +403,7 @@ window.getTricks = function getTricks() {
                                 1 vertical slash no cancel,
                                 2x jumpslash
                 `,
-                "items": ["master sword"],
+                "tags": ["master sword"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/buUV_5gnukM",
                 "credit": ""
@@ -407,7 +419,7 @@ window.getTricks = function getTricks() {
                                 keep holding down-left and roll
                                 press z on ledge clip frame.
                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu", "BK Skip"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/VOgoEvUMNBI",
                 "credit": ""
@@ -423,7 +435,7 @@ window.getTricks = function getTricks() {
                                 3ess right
                                 megabackflip
                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu", "BK Skip"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/EIBctPHYEvE",
                 "credit": ""
@@ -436,7 +448,7 @@ window.getTricks = function getTricks() {
                                 1 ess right for bomb
                                 2 for chu
                 `,
-                "items": ["bombchu", "bombs"],
+                "tags": ["bombchu", "bombs"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/CN0MsBqPfFM",
                 "credit": ""
@@ -454,17 +466,17 @@ window.getTricks = function getTricks() {
                                 door seems to stay open longer if you wait a bit
                                 door will eventually close so you have to go
                 `,
-                "items": ["bombchu", "bombs"],
+                "tags": ["bombchu", "bombs", "ocarina items"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/CN0MsBqPfFM",
                 "credit": ""
             },
             {
-                "name": "Jabu Adult Clip",
+                "name": "Adult Jabu Entry w/ Chus",
                 "location": "Zora's Fountain",
                 "description": `
                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/embed/NmtGis95m-A",
                 "credit": ""
@@ -474,13 +486,13 @@ window.getTricks = function getTricks() {
                 "location": "Fire Temple",
                 "description": `see: "How To Weirdshot"
                 `,
-                "items": ["bow", "hammer"],
+                "tags": ["bow", "hammer", "weirdshot"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/9zBMVo0dgEs",
                 "credit": ""
             },
             {
-                "name": "Clip Into Child Spirit Temple Bombs Hovers",
+                "name": "HESS Clip Into Child Side As Adult Spirit Temple",
                 "location": "Spirit Temple",
                 "description": `break the pots because they will mess up your slide
 
@@ -493,7 +505,7 @@ window.getTricks = function getTricks() {
                                 from the corner: hold left on stick, 1 frame release R, 1 frame re-hold R
                                 once you stop in the tunnel start running immediately or you'll fall
                 `,
-                "items": ["hover boots", "bombs"],
+                "tags": ["hover boots", "bombs", "superslide"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/9zBMVo0dgEs",
                 "credit": ""
@@ -509,7 +521,7 @@ window.getTricks = function getTricks() {
                                 R+Z+Roll on explosion frame
                                 R+Z+down on control stick for the rest
                 `,
-                "items": ["bombs"],
+                "tags": ["bombs"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/BGQS_VSnrtw",
                 "credit": ""
@@ -524,7 +536,7 @@ window.getTricks = function getTricks() {
                                 Shield drop chu on 8th red
                                 R+Z+Roll on black chu to the right
                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/yZcLZ4H6biY",
                 "credit": ""
@@ -538,7 +550,7 @@ window.getTricks = function getTricks() {
                                 hold down the whole time
                                 sidehop 2nd frame link is in the explosion
                 `,
-                "items": ["bombs"],
+                "tags": ["bombs", "mega sidehop"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/THbUU1wWTsE",
                 "credit": ""
@@ -564,8 +576,10 @@ window.getTricks = function getTricks() {
                                 6 *Release down* Z+Bow
 
                                 Let go of Z and unpause when fully underground
+
+                                for weirdslide never let go of Z
                 `,
-                "items": ["bow", "hookshot"],
+                "tags": ["bow", "hookshot", "weirdshot"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/IvQk6G__f2Q",
                 "credit": ""
@@ -578,7 +592,7 @@ window.getTricks = function getTricks() {
                                 go back through the crawlspace you came from
                                 water will be deloaded and you can go crawl to deadhand room
                 `,
-                "items": ["bombs"],
+                "tags": ["bombs"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/Y9DnpdHWLhs",
                 "credit": ""
@@ -588,13 +602,13 @@ window.getTricks = function getTricks() {
                 "location": "Death Mountain Crater",
                 "description": `target wall turn left shield drop chu while backwalking
                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/OrFZVADl1O8",
                 "credit": ""
             },
             {
-                "name": "DMC Weirdclip Into Boulder Grotto",
+                "name": "DMC Weirdslide Into Boulder Grotto",
                 "location": "Death Mountain Crater",
                 "description": `target wall and roll into corner
                                 backflip, sidehop left, backflip, sidehop left
@@ -603,7 +617,7 @@ window.getTricks = function getTricks() {
                                 do weirdshot but never let go of Z.
                                 see: "how to weirdshot"
                 `,
-                "items": ["bombs", "hookshot", "bow"],
+                "tags": ["bombs", "hookshot", "bow", "weirdshot", "weirdslide"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/UtxxHi8Ox0s",
                 "credit": ""
@@ -613,7 +627,7 @@ window.getTricks = function getTricks() {
                 "location": "Ganon's Castle",
                 "description": `
                 `,
-                "items": ["bombchu"],
+                "tags": ["bombchu"],
                 "age": "child",
                 "embed": "https://clips.twitch.tv/embed?clip=FrigidDepressedTitanDoritosChip-yMZMygiNziiIz4e2",
             },
@@ -625,12 +639,14 @@ window.getTricks = function getTricks() {
                                 Z+A+R (jumpslash with shield landing)
                                 let go of everything
                                 (input out of unpause or on the same frame) UP + B
+
+                                inputs for skip:
                                 go to door, sidehop left, roll+retarget for angle
                                 roll into corner.
                                 while holding z. sidehop right, roll, sidehop right, sidehop left
                                 b+r unsheath, 1ess right, jumpslash
                 `,
-                "items": ["kokiri sword"],
+                "tags": ["kokiri sword", "lunge storage"],
                 "age": "child",
                 "embed": "https://www.youtube.com/embed/XV1Bdq0MXNQ",
             },

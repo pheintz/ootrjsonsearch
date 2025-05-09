@@ -30,7 +30,7 @@ $(document).ready(function () {
     tricksJson.tricks.forEach(trick => {
         autoCompleteSet.add(trick.name.toLowerCase());
         autoCompleteSet.add(trick.location.toLowerCase());
-        trick.items.forEach(item => autoCompleteSet.add(item.toLowerCase()));
+        trick.tags.forEach(item => autoCompleteSet.add(item.toLowerCase()));
     });
 
     const autocompleteValues = Array.from(autoCompleteSet);
@@ -128,14 +128,14 @@ $(document).ready(function () {
         return tricksJson.tricks.filter(trick =>
             trick.name.toLowerCase().includes(lowerQuery) ||
             trick.location.toLowerCase().includes(lowerQuery) ||
-            trick.items.some(item => item.toLowerCase().includes(lowerQuery))
+            trick.tags.some(item => item.toLowerCase().includes(lowerQuery))
         );
     }
 
     function extractFilters(tricks) {
         const filters = new Set();
         tricks.forEach(trick => {
-            trick.items.forEach(item => filters.add(item.toLowerCase()));
+            trick.tags.forEach(item => filters.add(item.toLowerCase()));
             if (trick.location) filters.add(trick.location.toLowerCase());
             if (trick.age) filters.add(trick.age.toLowerCase());
         });
@@ -169,7 +169,7 @@ $(document).ready(function () {
                     <strong>Tags:</strong>
                     <div class="tag">${trick.location}</div>
                     <div class="tag">${trick.age}</div>
-                    ${trick.items.map(item => `<div class="tag">${item}</div>`).join('')}
+                    ${trick.tags.map(item => `<div class="tag">${item}</div>`).join('')}
                 </div>
             </article>
         </div>
