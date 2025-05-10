@@ -2,6 +2,60 @@ window.getTricks = function getTricks() {
     return {
         "tricks": [
             {
+                "name": "Fire Temple BK Skip 0 Keys Hovers Chus",
+                "location": "Spirit Temple",
+                "description": `
+                                get isg
+                                target wall, turn left, sidehop right
+                                equip hovers
+                                backflip hover 1x
+                                26? vertical hovers (R+A+Backflip)
+                                unequip hovers, sidehop left
+                                `,
+                "tags": ["bombchu", "hover boots"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/c3FUQPX-qL8",
+                "credit": ""
+            },
+            {
+                "name": "Weirdshot Into Child Spirit Temple From Crates Room",
+                "location": "Spirit Temple",
+                "description": `
+                                see: how to weirdshot,
+                                you can hookshot the torch to get in
+                                `,
+                "tags": ["hookshot", "bombs"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/c3FUQPX-qL8",
+                "credit": ""
+            },
+            {
+                "name": "Chu + Hovers up to Spirit Temple Hand",
+                "location": "Desert Colossus",
+                "description": `
+                            listen for the guays and try to get to the part where you turn around quickly so you can shield them
+
+                            get isg
+                            align with wall, backflip, roll and retarget
+                            roll into seam, 2x sidehop left, shield flick, roll
+                            backwalk and drop bomb at bottom of the stairs
+                            walk to the top of the stairs
+                            backflip on explosion frame you can see from off screen
+                            equip hover boots
+                            4x vertical hover (drop bomb and backflip on the same frame)
+                            on the 5th, buffer 2 frames and then press Z to target the chu. camera will unlock
+                            walk slightly up forward, no input for two frames, then control stick down, if link is backwalking then retarget
+                            5x vertical hovers
+                            unequip hover boots
+                            2x backflip target the seam and walk up
+                            hookshot chest
+                                `,
+                "tags": ["bombchu", "hover boots"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/5pDpqqw6WpU",
+                "credit": ""
+            },
+            {
                 "name": "Adult LH to ZD Bombchu Dive",
                 "location": "Lake Hylia",
                 "description": `
