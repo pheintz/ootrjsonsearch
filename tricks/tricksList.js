@@ -14,7 +14,7 @@ window.getTricks = function getTricks() {
                                 `,
                 "tags": ["bombchu", "hover boots"],
                 "age": "adult",
-                "embed": "https://youtube.com/embed/c3FUQPX-qL8",
+                "embed": "https://youtube.com/embed/YkSziqIy2_k",
                 "credit": ""
             },
             {
