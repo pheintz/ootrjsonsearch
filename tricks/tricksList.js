@@ -251,7 +251,7 @@ window.getTricks = function getTricks() {
             },
             {
                 "name": "Bomb QPA Hover Into Forest",
-                "location": "Anywhere",
+                "location": "Sacred Forest Meadow",
                 "description": `get QPA and ISG (see: "Adult Stick Nut QPA"))
                                 get into corner
                                 3 sidehop left and roll with target held
@@ -265,7 +265,7 @@ window.getTricks = function getTricks() {
             },
             {
                 "name": "Adult Stick Nut QPA (Quick Putaway)",
-                "location": "Sacred Forest Meadow",
+                "location": "general",
                 "description": `target wall
                                 backflip sidehop right
                                 roll+retarget, 2ess right
@@ -665,10 +665,10 @@ window.getTricks = function getTricks() {
                                 backflip
                                 pull hookshot or bow and cancel with shield
                                 Buffer in L+R roll on big blue, big red, or first explosion frame
-                                hold exactly down on control stick from 2nd frame of roll until frame where you pull hookshot
-                                frames
+                                hold down on control stick from 2nd frame of roll until you hit the explosion
+                                damage frame: it looks like link is getting pushed back and you'll see hook or bow in hand
 
-                                from first damage frame
+                                from unpause here frames:
                                 1 Z+R+Down
                                 2 Z+R+Down
                                 3 Z+R+Down
