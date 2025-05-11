@@ -27,6 +27,13 @@ const baseShareUrl = window.location.href.split('?')[0] + '?trick=';
 $(document).ready(function () {
     const autoCompleteSet = new Set();
 
+    tricksJson.tricks.sort(function (a, b) {
+        a = a.location.toLowerCase();
+        b = b.location.toLowerCase();
+
+        return a < b ? -1 : a > b ? 1 : 0;
+    });
+
     tricksJson.tricks.forEach(trick => {
         autoCompleteSet.add(trick.name.toLowerCase());
         autoCompleteSet.add(trick.location.toLowerCase());

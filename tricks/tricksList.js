@@ -103,7 +103,7 @@ window.getTricks = function getTricks() {
                 "credit": ""
             },
             {
-                "name": "Chu + Hovers up to Spirit Temple Hand (Mirror Chest)",
+                "name": "Chu + Hovers up to Spirit Temple Hand",
                 "location": "Desert Colossus",
                 "description": `
                             listen for the guays and try to get to the part where you turn around quickly so you can shield them
@@ -277,7 +277,7 @@ window.getTricks = function getTricks() {
             },
             {
                 "name": "Bomb QPA Hover Into Forest",
-                "location": "Sacred Forest Meadow",
+                "location": "Anywhere",
                 "description": `get QPA and ISG (see: "Adult Stick Nut QPA"))
                                 get into corner
                                 3 sidehop left and roll with target held
@@ -719,7 +719,7 @@ window.getTricks = function getTricks() {
                                 go back through the crawlspace you came from
                                 water will be deloaded and you can go crawl to deadhand room
                 `,
-                "tags": ["bombs"],
+                "tags": ["itemless"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/Y9DnpdHWLhs",
                 "credit": ""

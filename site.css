@@ -319,10 +319,13 @@ svg {
     }
 
 .filter-container {
+    max-width: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    align-self: center;
 }
 
 .video-container {
