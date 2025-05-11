@@ -2,6 +2,79 @@ window.getTricks = function getTricks() {
     return {
         "tricks": [
             {
+                "name": "child qpa hover into ic",
+                "location": "Zora's Fountain",
+                "description": `
+                                get QPA and ISG
+                                Align with pillar and turn around
+                                without retargeting: sidehop left, roll, roll
+                                pull stick
+                                frame 1: Z+R+Down
+                                frame 2: Bomb+Z+R
+                                keep holding Z+R
+                                frame link is standing: backflip again onto railing
+                                align with landing zone from on railing
+                                qpa hover like before until you make it:
+                                pull stick, 1 frame backflip, Unpause with  Bomb+Z+R
+                                `,
+                "tags": ["bombs", "bombchu"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/Jg4vIiGzJCY",
+                "credit": ""
+            },
+            {
+                "name": "Skip Dampe Windmill SoT Block w/ bombs/chus",
+                "location": "Graveyard",
+                "description": `
+                                align wall on right against the block
+                                bombs: 1ess right
+                                chus: 2ess right
+                                `,
+                "tags": ["bombs", "bombchu"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/jUvkmsHJLaY",
+                "credit": ""
+            },
+            {
+                "name": "child clip into lake hylia from zoras domain with sticks",
+                "location": "Zora's Domain",
+                "description": `
+                                align with wall, turn right
+                                backwalk and sidehop into seam
+                                retarget, roll, 2x sidehop right, backflip, jumpslash
+                                turn right and retarget, swim backwards off the ledge and back up
+                                `,
+                "tags": ["deku stick"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/Nl9dUk5E9jA",
+                "credit": ""
+            },
+            {
+                "name": "Chu + Hoverboots up to Spirit Temple Hand Chest",
+                "location": "Desert Colossus",
+                "description": `
+                                get isg
+                                align with wall, backflip, roll and retarget
+                                roll into seam, 2x sidehop left, shield flick, roll
+                                backwalk and drop bomb at bottom of the stairs
+                                walk to the top of the stairs
+                                backflip on 1st explosion frame you can see from off screen
+                                now in the air standing:
+                                equip hover boots
+                                4x vertical hover (drop bomb and backflip on the same frame)
+                                on the 5th, have Z unpressed buffer 2 frames after dropping the bomb then press Z to target the chu. camera will unlock
+                                walk slightly up-right forward (see how link is walking in video), no input for two frames, then control stick down, you want link backwalking then retarget
+                                5x vertical hovers
+                                unequip hover boots
+                                2x backflip target the seam and walk up
+                                hookshot the chest
+                                `,
+                "tags": ["bombchu", "hover boots"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/tDZH1-jFqh4",
+                "credit": ""
+            },
+            {
                 "name": "Fire Temple BK Skip 0 Keys Hovers Chus",
                 "location": "Spirit Temple",
                 "description": `
@@ -424,7 +497,7 @@ window.getTricks = function getTricks() {
                             when stick starts burning out, hold left and walk off the edge
                             jumpslash on first frame the top link's head is below the ledge
                 `,
-                "tags": ["bombs"],
+                "tags": ["deku sticks"],
                 "age": "any age",
                 "embed": "https://www.youtube.com/embed/kqV5v6fUIuk",
                 "credit": ""
