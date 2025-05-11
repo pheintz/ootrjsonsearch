@@ -30,7 +30,7 @@ window.getTricks = function getTricks() {
                 "credit": ""
             },
             {
-                "name": "Chu + Hovers up to Spirit Temple Hand",
+                "name": "Chu + Hovers up to Spirit Temple Hand (Mirror Chest)",
                 "location": "Desert Colossus",
                 "description": `
                             listen for the guays and try to get to the part where you turn around quickly so you can shield them
@@ -50,7 +50,7 @@ window.getTricks = function getTricks() {
                             2x backflip target the seam and walk up
                             hookshot chest
                                 `,
-                "tags": ["bombchu", "hover boots"],
+                "tags": ["bombchu", "hover boots", "mirror shield"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/5pDpqqw6WpU",
                 "credit": ""
