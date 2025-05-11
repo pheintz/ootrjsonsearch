@@ -185,6 +185,12 @@ a {
 
     .result:hover {
         background-color: var(--hover-color);
+        cursor: pointer;
+    }
+
+    .result.shown:hover {
+        background-color: var(--hover-color);
+        cursor: initial;
     }
 
 .key-category {
