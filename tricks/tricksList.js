@@ -103,32 +103,6 @@ window.getTricks = function getTricks() {
                 "credit": ""
             },
             {
-                "name": "Chu + Hovers up to Spirit Temple Hand",
-                "location": "Desert Colossus",
-                "description": `
-                            listen for the guays and try to get to the part where you turn around quickly so you can shield them
-
-                            get isg
-                            align with wall, backflip, roll and retarget
-                            roll into seam, 2x sidehop left, shield flick, roll
-                            backwalk and drop bomb at bottom of the stairs
-                            walk to the top of the stairs
-                            backflip on explosion frame you can see from off screen
-                            equip hover boots
-                            4x vertical hover (drop bomb and backflip on the same frame)
-                            on the 5th, buffer 2 frames and then press Z to target the chu. camera will unlock
-                            walk slightly up forward, no input for two frames, then control stick down, if link is backwalking then retarget
-                            5x vertical hovers
-                            unequip hover boots
-                            2x backflip target the seam and walk up
-                            hookshot chest
-                                `,
-                "tags": ["bombchu", "hover boots", "mirror shield"],
-                "age": "adult",
-                "embed": "https://youtube.com/embed/5pDpqqw6WpU",
-                "credit": ""
-            },
-            {
                 "name": "Adult LH to ZD Bombchu Dive",
                 "location": "Lake Hylia",
                 "description": `
