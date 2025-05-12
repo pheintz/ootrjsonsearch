@@ -2,6 +2,35 @@ window.getTricks = function getTricks() {
     return {
         "tricks": [
             {
+                "name": "Ice Cavern Red Ice Bomb Push",
+                "location": "Zora's Domain",
+                "description": `
+                                4 frames backwalk after dropping bombs
+                                turn around and backwalk
+                                backflip when the camera re centers
+                                `,
+                "tags": ["bombs"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/dU9R5smlQfc",
+                
+            },
+            {
+                "name": "King Zora Itemless Skip",
+                "location": "Zora's Domain",
+                "description": `
+                                climb up next to the pillar
+                                roll, sidehop left, roll+retarget
+                                sidehop left, roll+retarget
+                                backflip and without retargeting roll 3x
+                                sidehop left, roll+retarget
+                                roll, sidehop left x2 and hold foward
+                                `,
+                "tags": ["itemless"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/Hvq95fTEaGQ",
+                
+            },
+            {
                 "name": "child qpa hover into ic",
                 "location": "Zora's Fountain",
                 "description": `
@@ -20,7 +49,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs", "bombchu"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/Jg4vIiGzJCY",
-                "credit": ""
+                
             },
             {
                 "name": "Skip Dampe Windmill SoT Block w/ bombs/chus",
@@ -33,7 +62,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs", "bombchu"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/jUvkmsHJLaY",
-                "credit": ""
+                
             },
             {
                 "name": "child clip into lake hylia from zoras domain with sticks",
@@ -47,7 +76,7 @@ window.getTricks = function getTricks() {
                 "tags": ["deku stick"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/Nl9dUk5E9jA",
-                "credit": ""
+                
             },
             {
                 "name": "Chu + Hoverboots up to Spirit Temple Hand Chest",
@@ -72,7 +101,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "hover boots"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/tDZH1-jFqh4",
-                "credit": ""
+                
             },
             {
                 "name": "Fire Temple BK Skip 0 Keys Hovers Chus",
@@ -88,7 +117,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "hover boots"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/YkSziqIy2_k",
-                "credit": ""
+                
             },
             {
                 "name": "Weirdshot Into Child Spirit Temple From Crates Room",
@@ -97,10 +126,10 @@ window.getTricks = function getTricks() {
                                 see: how to weirdshot,
                                 you can hookshot the torch to get in
                                 `,
-                "tags": ["hookshot", "bombs"],
+                "tags": ["hookshot", "bombs", "weirdshot"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/c3FUQPX-qL8",
-                "credit": ""
+                
             },
             {
                 "name": "Adult LH to ZD Bombchu Dive",
@@ -119,7 +148,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/G6XVwXbBo8s",
-                "credit": ""
+                
             },
             {
                 "name": "Water Temple BK Skip Bombchu",
@@ -138,7 +167,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "BK Skip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/pHanWnYieYc",
-                "credit": ""
+                
             },
             {
                 "name": "Spirit Temple BK Skip Bombchu",
@@ -158,7 +187,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "BK Skip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/HdzPVbpwoEI",
-                "credit": ""
+                
             },
             {
                 "name": "Child Shadow Temple Gate Clip",
@@ -172,7 +201,7 @@ window.getTricks = function getTricks() {
                 "tags": ["deku sticks"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/tFbHGK8Wl6c",
-                "credit": ""
+                
             },
             {
                 "name": "Child Water Temple Entry Superslide",
@@ -197,7 +226,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "superslide"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/_1fHdyn595U",
-                "credit": ""
+                
             },
             {
                 "name": "Enter Jabu As Adult w/ Bombchu",
@@ -227,7 +256,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/xDLnTnV9UcY",
-                "credit": ""
+                
             },
             {
                 "name": "Child Statue Climb From Child Side",
@@ -247,7 +276,7 @@ window.getTricks = function getTricks() {
                 "tags": ["2HW"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/TiTWNFPGImA",
-                "credit": ""
+                
             },
             {
                 "name": "Bomb QPA Hover Into Forest",
@@ -261,7 +290,7 @@ window.getTricks = function getTricks() {
                 "tags": ["2HW", "1HW", "bombs"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/mZ41KgN2TF8",
-                "credit": ""
+                
             },
             {
                 "name": "Adult Stick Nut QPA (Quick Putaway)",
@@ -278,7 +307,7 @@ window.getTricks = function getTricks() {
                 "tags": ["2HW", "1HW", "bombs"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/C5gYslOuxlU",
-                "credit": ""
+                
             },
             {
                 "name": "GTG Gate Clip Bombs",
@@ -290,7 +319,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs", "gate clip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/k-oAPiO8mPM",
-                "credit": ""
+                
             },
             {
                 "name": "Deku Adult BK (231) Skip",
@@ -303,7 +332,7 @@ window.getTricks = function getTricks() {
                 "tags": ["2HW", "1HW", "BK Skip"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/embed/4jmnz6FM3kU",
-                "credit": ""
+                
             },
             {
                 "name": "Enter Closed Deku As Adult",
@@ -312,7 +341,6 @@ window.getTricks = function getTricks() {
                 "tags": ["hover boots", "bombs"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/shorts/L6R4GkOsHYM",
-                "credit": "https://www.youtube.com/@JBurtonGaming"
             },
             {
                 "name": "Deku Tree B1 Skip",
@@ -321,7 +349,6 @@ window.getTricks = function getTricks() {
                 "tags": ["itemless"],
                 "age": "child",
                 "embed": "https://www.youtube.com/shorts/TEAxY97Y0c0",
-                "credit": "https://www.youtube.com/@LinksterGames/"
             },
             {
                 "name": "Dodongo Eyes Early Boss Bombchu",
@@ -334,7 +361,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu"],
                 "age": "any age",
                 "embed": "",
-                "credit": ""
+                
             },
             {
                 "name": "Jabu Blue Switch Child Skip",
@@ -343,7 +370,7 @@ window.getTricks = function getTricks() {
                 "tags": ["deku sticks"],
                 "age": "child",
                 "embed": "https://www.youtube.com/shorts/cUw1sdlqUFA",
-                "credit": ""
+                
             },
             {
                 "name": "Jabu Blue Switch Adult Skip",
@@ -354,7 +381,7 @@ window.getTricks = function getTricks() {
                 "tags": ["itemless"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/embed/G9cNyW5K8Vc",
-                "credit": ""
+                
             },
             {
                 "name": "Megaflip w/ bombs to Jabu Switch",
@@ -367,7 +394,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs", "megaflip"],
                 "age": "any age",
                 "embed": "https://www.youtube.com/embed/T7A5vm4iXJw",
-                "credit": ""
+                
             },
             {
                 "name": "Lost Woods Aqua Escape",
@@ -376,7 +403,6 @@ window.getTricks = function getTricks() {
                 "tags": ["1hw", "2hw"],
                 "age": "child",
                 "embed": "https://www.youtube.com/embed/D3RSZ1WyB5A",
-                "credit": "https://www.youtube.com/@StoneeBadLuck"
             },
             {
                 "name": "Child Forest Temple BK Skip bombchu",
@@ -385,7 +411,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "BK Skip", "vine clip"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/f0l6W0blyUw",
-                "credit": ""
+                
             },
             {
                 "name": "Forest Temple Mega Backflip to Scarecrow",
@@ -398,7 +424,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "megaflip"],
                 "age": "any age",
                 "embed": "https://youtube.com/emvbed/dVfhIBN8Q7E",
-                "credit": ""
+                
             },
             {
                 "name": "Skip First Key in Forest Temple",
@@ -407,7 +433,6 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "hover boots"],
                 "age": "adult",
                 "embed": "https://youtube.com/shorts/MqgM5zs8Xdc",
-                "credit": "https://www.youtube.com/@JBurtonGaming"
             },
             {
                 "name": "Forest Temple First Green Block Skip",
@@ -416,7 +441,7 @@ window.getTricks = function getTricks() {
                 "tags": ["1HW", "2HW"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/xqUVH-3T9Nw",
-                "credit": ""
+                
             },
             {
                 "name": "Forest Temple Block Room to Courtyard",
@@ -425,7 +450,7 @@ window.getTricks = function getTricks() {
                 "tags": ["1HW", "2HW"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/KW9U3UyDZr4",
-                "credit": ""
+                
             },
             {
                 "name": "Weirdshot Fire Temple BK Chest",
@@ -435,7 +460,7 @@ window.getTricks = function getTricks() {
                 "tags": ["hookshot", "weirdshot"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/embed/IPpPgkgMnPw",
-                "credit": ""
+                
             },
             {
                 "name": "Child Statue Climb",
@@ -451,7 +476,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs"],
                 "age": "child",
                 "embed": "https://www.youtube.com/embed/9llUpjaAUrI",
-                "credit": ""
+                
             },
             {
                 "name": "Spirit/Water Temple Bombs BK Skip",
@@ -460,7 +485,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs", "BK Skip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/GJOHtcVqUQg",
-                "credit": ""
+                
             },
             {
                 "name": "Child Skip King Zora Deku Sticks",
@@ -474,7 +499,7 @@ window.getTricks = function getTricks() {
                 "tags": ["deku sticks"],
                 "age": "any age",
                 "embed": "https://www.youtube.com/embed/kqV5v6fUIuk",
-                "credit": ""
+                
             },
             {
                 "name": "Shadow Temple No Hovers to Boss Door",
@@ -492,7 +517,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "BK Skip"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/G8ASlsOYLak",
-                "credit": ""
+                
             },
             {
                 "name": "Shadow Temple Gate Clip to Boat",
@@ -507,7 +532,7 @@ window.getTricks = function getTricks() {
                 "tags": ["master sword"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/buUV_5gnukM",
-                "credit": ""
+                
             },
             {
                 "name": "Shadow Temple BK Skip",
@@ -523,7 +548,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "BK Skip"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/VOgoEvUMNBI",
-                "credit": ""
+                
             },
             {
                 "name": "Setup for Boatkey",
@@ -539,7 +564,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "BK Skip"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/EIBctPHYEvE",
-                "credit": ""
+                
             },
             {
                 "name": "OGC Fairy Strength Block Skip",
@@ -552,7 +577,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "bombs"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/CN0MsBqPfFM",
-                "credit": ""
+                
             },
             {
                 "name": "DDC Backflip OI Push Block Skip",
@@ -570,7 +595,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu", "bombs", "ocarina items"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/CN0MsBqPfFM",
-                "credit": ""
+                
             },
             {
                 "name": "Adult Jabu Entry w/ Chus",
@@ -580,7 +605,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu"],
                 "age": "adult",
                 "embed": "https://www.youtube.com/embed/NmtGis95m-A",
-                "credit": ""
+                
             },
             {
                 "name": "Volvagia Quick Kill Weirdshot w/ Bow",
@@ -590,7 +615,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bow", "hammer", "weirdshot"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/9zBMVo0dgEs",
-                "credit": ""
+                
             },
             {
                 "name": "HESS Clip Into Child Side As Adult Spirit Temple",
@@ -609,7 +634,7 @@ window.getTricks = function getTricks() {
                 "tags": ["hover boots", "bombs", "superslide"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/9zBMVo0dgEs",
-                "credit": ""
+                
             },
             {
                 "name": "Clip into DMC from Goron City Bombs",
@@ -625,7 +650,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/BGQS_VSnrtw",
-                "credit": ""
+                
             },
             {
                 "name": "Clip into DMC from Goron City Chus",
@@ -640,7 +665,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/yZcLZ4H6biY",
-                "credit": ""
+                
             },
             {
                 "name": "Mega Sidehop Into Darunia's Room",
@@ -654,7 +679,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs", "mega sidehop"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/THbUU1wWTsE",
-                "credit": ""
+                
             },
             {
                 "name": "How To Weirdshot",
@@ -683,7 +708,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bow", "hookshot", "weirdshot"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/IvQk6G__f2Q",
-                "credit": ""
+                
             },
             {
                 "name": "Bottom of the Well Actor Deload",
@@ -696,7 +721,7 @@ window.getTricks = function getTricks() {
                 "tags": ["itemless"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/Y9DnpdHWLhs",
-                "credit": ""
+                
             },
             {
                 "name": "DMC Fairy Boulder Skip w/ Bombchu",
@@ -706,7 +731,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/OrFZVADl1O8",
-                "credit": ""
+                
             },
             {
                 "name": "DMC Weirdslide Into Boulder Grotto",
@@ -721,7 +746,7 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs", "hookshot", "bow", "weirdshot", "weirdslide"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/UtxxHi8Ox0s",
-                "credit": ""
+                
             },
             {
                 "name": "Child Light Trial Block Skip",
