@@ -482,7 +482,7 @@ window.getTricks = function getTricks() {
                 "name": "Spirit/Water Temple Bombs BK Skip",
                 "location": "Spirit Temple",
                 "description": `Get ISG on door. Z target door. (drop as fast as you can) Shield drop sidehop shield drop. Backflip on big blue then backflip again. Pull bomb and press a to drop. If 2handed weapon pull out. On big red either unsheath or swing your two hander.`,
-                "tags": ["bombs", "BK Skip"],
+                "tags": ["bombs", "BK Skip", "Water Temple"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/GJOHtcVqUQg",
                 
