@@ -598,16 +598,6 @@ window.getTricks = function getTricks() {
                 
             },
             {
-                "name": "Adult Jabu Entry w/ Chus",
-                "location": "Zora's Fountain",
-                "description": `
-                `,
-                "tags": ["bombchu"],
-                "age": "adult",
-                "embed": "https://www.youtube.com/embed/NmtGis95m-A",
-                
-            },
-            {
                 "name": "Volvagia Quick Kill Weirdshot w/ Bow",
                 "location": "Fire Temple",
                 "description": `see: "How To Weirdshot"
