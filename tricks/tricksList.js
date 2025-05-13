@@ -322,6 +322,52 @@ window.getTricks = function getTricks() {
                 
             },
             {
+                "name": "Distance Megaflip Gerudo Valley",
+                "location": "Gerudo Valley",
+                "description": `
+                            align on pillar black line
+                            left sidehop, shield flick, right sidehop
+                            backflip, roll, bonk (Z+Roll+Hold Up)
+                            left sidehop, roll+retarget
+                            left sidehop, roll+retarget
+                            2x backflip, sidehop right
+                            bomb, roll, backflip
+                            roll on big red
+
+                            for distance megaflip:
+                            1st frame when link has shield out: Z+R+Down
+                            2nd frame link has shield out, backflip: Z+R+Down+A
+                `,
+                "tags": ["bombs"],
+                "age": "any age",
+                "embed": "https://youtube.com/embed/sdOLkSfFevY",
+
+            },
+            {
+                "name": "Gerudo Valley Cucko Jump w/ sticks",
+                "location": "deku tree",
+                "description": `
+                                remove bunny hood
+                                get quickdraw (cancel draw stick animation while falling in water)
+                                align with wall, turn left and backwalk all the way
+                                throw cucko, turn around and re center camera and pause
+                                to keep from speaking to guard pause is required
+                                backflip out of the pause, then backflip again out of another pause
+                                shield flick, roll, let go of Z and pick up the cucko
+                                Z and release if you need to again to ess turn right
+                                hold Z, 5 frames backwalk, on the 5th unpause let go of all inputs
+                                once you come to a stop, one frame up and then hold left
+                                when link is no longer visible
+                                1 frame stick pull due to quickdraw
+                                1 frame no inputs
+                                1 frame stick jumpslash
+                    `,
+                "tags": ["deku sticks"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/OSGjX3cGAEU",
+
+            },
+            {
                 "name": "Deku Adult BK (231) Skip",
                 "location": "deku tree",
                 "description": `
@@ -627,35 +673,16 @@ window.getTricks = function getTricks() {
                 
             },
             {
-                "name": "Clip into DMC from Goron City Bombs",
+                "name": "Pot Push Into DMC From Goron City",
                 "location": "Goron City",
-                "description": `Target wall behind torch
-                                turn left
-                                roll into corner
-                                shield drop bomb
-                                with Z: backflip, roll
-                                R+Z+Roll on explosion frame
-                                R+Z+down on control stick for the rest
+                "description": `
+                                target wall, turn right, backwalk into corner and come to a stop
+                                7 frames walking forward, let go of control stick and come to a stop
+                                7 frames backwalk, out of the unpause Z+R+Down
                 `,
-                "tags": ["bombs"],
+                "tags": ["itemless"],
                 "age": "child",
-                "embed": "https://youtube.com/embed/BGQS_VSnrtw",
-                
-            },
-            {
-                "name": "Clip into DMC from Goron City Chus",
-                "location": "Goron City",
-                "description": `Target wall behind torch
-                                turn left
-                                roll into corner
-                                with Z: backflip, roll
-                                Shield drop chu on 8th red
-                                R+Z+Roll on black chu to the right
-                `,
-                "tags": ["bombchu"],
-                "age": "child",
-                "embed": "https://youtube.com/embed/yZcLZ4H6biY",
-                
+                "embed": "https://youtube.com/embed/un_s31uOhlM",
             },
             {
                 "name": "Mega Sidehop Into Darunia's Room",
