@@ -469,7 +469,7 @@ window.getTricks = function getTricks() {
                                 turn around and megaflip`,
                 "tags": ["bombchu", "megaflip"],
                 "age": "any age",
-                "embed": "https://youtube.com/emvbed/dVfhIBN8Q7E",
+                "embed": "https://youtube.com/embed/dVfhIBN8Q7E",
                 
             },
             {
