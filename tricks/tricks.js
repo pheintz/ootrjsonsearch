@@ -19,38 +19,44 @@
  */
 
 const tricksJson = window.getTricks();
+
+const autoCompleteSet = new Set();
+
+tricksJson.tricks.forEach(trick => {
+    autoCompleteSet.add(trick.name.toLowerCase());
+    autoCompleteSet.add(trick.location.toLowerCase());
+    trick.tags.forEach(item => autoCompleteSet.add(item.toLowerCase()));
+});
+const autocompleteValues = Array.from(autoCompleteSet);
+const autocompleteFuse = new Fuse(autocompleteValues, {
+    includeScore: true,
+    threshold: 0.4,
+});
+const trickFuse = new Fuse(tricksJson.tricks, {
+    keys: ['name', 'location', 'tags'],
+    threshold: 0.4,
+    includeScore: true,
+    ignoreLocation: true
+});
+
+
 const $searchResults = $('#search-results');
 const $searchInput = $('#search');
 const baseShareUrl = window.location.href.split('?')[0] + '?trick=';
 
 
 $(document).ready(function () {
-    const autoCompleteSet = new Set();
-
-    tricksJson.tricks.sort(function (a, b) {
-        a = a.location.toLowerCase();
-        b = b.location.toLowerCase();
-
-        return a < b ? -1 : a > b ? 1 : 0;
-    });
-
-    tricksJson.tricks.forEach(trick => {
-        autoCompleteSet.add(trick.name.toLowerCase());
-        autoCompleteSet.add(trick.location.toLowerCase());
-        trick.tags.forEach(item => autoCompleteSet.add(item.toLowerCase()));
-    });
-
-    const autocompleteValues = Array.from(autoCompleteSet);
-
     $('#search').autocomplete({
         source: function (request, response) {
-            let results = $.ui.autocomplete.filter(autocompleteValues, request.term);
-            response(results.slice(0, 8));
+            const results = autocompleteFuse.search(request.term);
+            const suggestions = results.map(r => r.item).slice(0, 8); // top 8 results
+            response(suggestions);
         },
         select: function (event, ui) {
             handleSearch(ui.item.value.toLowerCase());
         }
     });
+
     $('#search').keypress(function (event) {
         if (event.key === "Enter") {
             const query = $(this).val().toLowerCase();
@@ -131,12 +137,10 @@ $(document).ready(function () {
         });
     }
     function filterTricks(query) {
-        const lowerQuery = query.toLowerCase();
-        return tricksJson.tricks.filter(trick =>
-            trick.name.toLowerCase().includes(lowerQuery) ||
-            trick.location.toLowerCase().includes(lowerQuery) ||
-            trick.tags.some(item => item.toLowerCase().includes(lowerQuery))
-        );
+        if (!query.trim()) return tricksJson.tricks;
+
+        const fuseResults = trickFuse.search(query);
+        return fuseResults.map(result => result.item);
     }
 
     function extractFilters(tricks) {
