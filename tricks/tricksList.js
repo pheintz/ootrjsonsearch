@@ -73,7 +73,7 @@ window.getTricks = function getTricks() {
                                 retarget, roll, 2x sidehop right, backflip, jumpslash
                                 turn right and retarget, swim backwards off the ledge and back up
                                 `,
-                "tags": ["deku stick"],
+                "tags": ["deku sticks"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/Nl9dUk5E9jA",
                 

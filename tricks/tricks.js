@@ -30,13 +30,16 @@ tricksJson.tricks.forEach(trick => {
 const autocompleteValues = Array.from(autoCompleteSet);
 const autocompleteFuse = new Fuse(autocompleteValues, {
     includeScore: true,
-    threshold: 0.4,
+    ignoreLocation: true,
+    threshold: 0.3,
+    useExtendedSearch: true
 });
 const trickFuse = new Fuse(tricksJson.tricks, {
     keys: ['name', 'location', 'tags'],
-    threshold: 0.4,
     includeScore: true,
-    ignoreLocation: true
+    ignoreLocation: true,
+    threshold: 0.3,
+    useExtendedSearch: true
 });
 
 
@@ -49,7 +52,7 @@ $(document).ready(function () {
     $('#search').autocomplete({
         source: function (request, response) {
             const results = autocompleteFuse.search(request.term);
-            const suggestions = results.map(r => r.item).slice(0, 8); // top 8 results
+            const suggestions = results.map(r => r.item).slice(0, 8);
             response(suggestions);
         },
         select: function (event, ui) {
