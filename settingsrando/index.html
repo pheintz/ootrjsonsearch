@@ -31,9 +31,12 @@
     <script type="text/javascript">
         let config = window.getConfig();
         document.getElementById('RandomContainer').innerHTML = renderInputs(config);
+        
         document.getElementById('generate').onclick = function () {
+            RandomizeSongs()
             generateConfigForDownload(config);
         };
+
         document.getElementById('ExtraModes').onclick = function () {
             if (this.checked) {
                 config = window.getExtraModes();
