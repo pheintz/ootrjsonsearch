@@ -24,13 +24,8 @@
     <script type="text/javascript">
         const config = window.getConfig();
         document.getElementById('RandomContainer').innerHTML = renderInputs(config);
-        window.onload = function () {
-            document.getElementById('generate').onclick = function () {
-                const genNewConfigButton = document.querySelector('#generate');
-                genNewConfigButton.onclick = () => {
-                    generateConfigForDownload(config);
-                }
-            };
+        document.getElementById('generate').onclick = function () {
+            generateConfigForDownload(config);  
         };
     </script>
 </body>
