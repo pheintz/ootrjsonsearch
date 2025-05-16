@@ -1,0 +1,26 @@
+:root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #673AB7;
+    --secondary-color: #673AB7;
+    --input-bg-color: #1e1e1e;
+    --input-border-color: #292929;
+    --hover-color: #333333;
+    --result-highlight: #212121;
+    --input-action: #66BB6A;
+}
+
+#RandomContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px; /* Adjust gap as needed */
+}
+
+#generate {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+}

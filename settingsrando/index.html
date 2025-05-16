@@ -1,6 +1,37 @@
-<div id="settings"></div>
-
-<script src="./settingsrando.js"></script>
-<script>
-
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <title>Randomizer Randomizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../site.css?v=<!-- VERSION -->">
+    <link rel="stylesheet" href="./rando.css?v=<!-- VERSION -->">
+</head>
+<body>
+    <h1>Randomizer Randomizer</h1>
+    <div>
+        <button id="generate" style="height: 50px; width: 500px;">Generate Randomizer Config</button>
+    </div>
+    <div id="RandomContainer"></div>
+    <script src="./getConfig.js"></script>
+    <script src="./settingsrando.js"></script>
+    <script type="text/javascript">
+        const config = window.getConfig();
+        document.getElementById('RandomContainer').innerHTML = renderInputs(config);
+        window.onload = function () {
+            document.getElementById('generate').onclick = function () {
+                const genNewConfigButton = document.querySelector('#generate');
+                genNewConfigButton.onclick = () => {
+                    generateConfigForDownload(config);
+                }
+            };
+        };
+    </script>
+</body>
+</html>
