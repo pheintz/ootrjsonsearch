@@ -29,18 +29,18 @@
     <script src="./getExtraModes.js"></script>
     <script src="./settingsrando.js"></script>
     <script type="text/javascript">
-        const config = window.getConfig();
+        let config = window.getConfig();
         document.getElementById('RandomContainer').innerHTML = renderInputs(config);
         document.getElementById('generate').onclick = function () {
             generateConfigForDownload(config);
         };
         document.getElementById('ExtraModes').onclick = function () {
             if (this.checked) {
-                document.getElementById('RandomContainer').innerHTML = renderInputs(window.getExtraModes());
+                config = window.getExtraModes();
+            } else {
+                config = window.getConfig();
             }
-            else {
-                document.getElementById('RandomContainer').innerHTML = renderInputs(window.getConfig());
-            }
+            document.getElementById('RandomContainer').innerHTML = renderInputs(config);
         };
     </script>
 </body>

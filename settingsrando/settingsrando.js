@@ -26,12 +26,12 @@ function renderInputs(obj, parentKey = '') {
 }
 
 function generateConfigForDownload(objectToReplace) {
-    const outputJSON = structuredClone(objectToReplace); // Deep clone to avoid modifying original
+    const outputJSON = structuredClone(objectToReplace);
 
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const checkboxes = document.querySelectorAll('.randomize-check');
 
     checkboxes.forEach(checkbox => {
-        const path = checkbox.getAttribute('name'); // e.g., "gCheats.infiniteHealth"
+        const path = checkbox.getAttribute('name'); 
         const min = checkbox.getAttribute('data-min');
         const max = checkbox.getAttribute('data-max');
 
@@ -39,22 +39,20 @@ function generateConfigForDownload(objectToReplace) {
         if (min && max) {
             value = Math.floor(Math.random() * (parseInt(max) - parseInt(min) + 1)) + parseInt(min);
         }
-        else if (path.includes('EnabledTricks'))
-        {
-            // Do nothing. Keep all tricks in logic.
-            value = min;
-        }
-        else if (path.includes('ExcludedLocations')) {
-            // frogs in the rain coin toss
-            if ((Math.floor(Math.random() * 2) == 0)) {
+        else if (path) { 
+            if (path.includes('EnabledTricks')) {
+                // Do nothing. Keep all tricks in logic.
                 value = min;
             }
-            else {
-                value = "";
+            else if (path.includes('ExcludedLocations')) {
+                // frogs in the rain coin toss
+                if ((Math.floor(Math.random() * 2) == 0)) {
+                    value = min;
+                }
+                else {
+                    value = "";
+                }
             }
-        }
-        else {
-            value = checkbox.checked;
         }
         const keys = path.split('.');
         let current = outputJSON;
