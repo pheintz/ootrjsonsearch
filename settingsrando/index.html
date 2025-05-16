@@ -16,10 +16,9 @@
 <body>
     <h1>Randomizer Randomizer</h1>
     <div>
-        <label for="ExtraModes">
+        Extra Modes: <input type="checkbox" id="ExtraModes" /><label for="ExtraModes">
             Mirrored World, Enemy Randomizer, Randomized Enemy Sizes, Shadow Tag Modem Additional Traps
         </label>
-        <input type="checkbox" id="ExtraModes" />
     </div>
     <div>
         <button id="generate" style="height: 50px; width: 500px;">Generate Randomizer Config</button>
@@ -27,12 +26,21 @@
     <h2>These checkboxes don't do anything right now but you can see what is randomized</h2>
     <div id="RandomContainer"></div>
     <script src="./getConfig.js"></script>
+    <script src="./getExtraModes.js"></script>
     <script src="./settingsrando.js"></script>
     <script type="text/javascript">
         const config = window.getConfig();
         document.getElementById('RandomContainer').innerHTML = renderInputs(config);
         document.getElementById('generate').onclick = function () {
-            generateConfigForDownload(config);  
+            generateConfigForDownload(config);
+        };
+        document.getElementById('ExtraModes').onclick = function () {
+            if (this.checked) {
+                document.getElementById('RandomContainer').innerHTML = renderInputs(window.getExtraModes());
+            }
+            else {
+                document.getElementById('RandomContainer').innerHTML = renderInputs(window.getConfig());
+            }
         };
     </script>
 </body>

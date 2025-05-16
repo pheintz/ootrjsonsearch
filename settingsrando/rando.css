@@ -8,6 +8,11 @@
     --hover-color: #333333;
     --result-highlight: #212121;
     --input-action: #66BB6A;
+    --checkbox-size: 20px;
+    --checkbox-border-radius: 4px;
+    --checkbox-checked-bg: var(--primary-color);
+    --checkbox-unchecked-bg: var(--input-bg-color);
+    --checkbox-border: 2px solid var(--input-border-color);
 }
 
 #RandomContainer {
@@ -24,3 +29,10 @@
     display: inline-block;
     font-size: 24px;
 }
+
+/* Custom Checkbox Styles */
+input[type="checkbox"] {
+    height: 24px;
+    width: 24px;
+}
+

@@ -158,6 +158,7 @@ window.getExtraModes = function getExtraModes() {
                     "WhiteWolfos": "0-1",
                     "WitheredBaba": "0-1"
                 },
+                "RandomizedEnemySizes": "0-1",
                 "RedGanonBlood": 1,
                 "RemoveExplosiveLimit": 1,
                 "SeparateArrows": 1,
