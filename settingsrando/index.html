@@ -17,7 +17,7 @@
     <h1>Randomizer Randomizer</h1>
     <div>
         Extra Modes*: <input type="checkbox" id="ExtraModes" /><label for="ExtraModes">
-            *Extra modes include: Mirrored World, Enemy Randomizer, Randomized Enemy Sizes, Shadow Tag, Additional Traps
+        *Extra modes include: Mirrored World, Enemy Randomizer, Randomized Enemy Sizes, Shadow Tag, Additional Traps
         </label>
     </div>
     <div>
@@ -33,7 +33,6 @@
         document.getElementById('RandomContainer').innerHTML = renderInputs(config);
         
         document.getElementById('generate').onclick = function () {
-            RandomizeSongs()
             generateConfigForDownload(config);
         };
 

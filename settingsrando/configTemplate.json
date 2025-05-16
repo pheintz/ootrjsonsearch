@@ -1,6 +1,20 @@
 {
   "CVars": {
     "ConfigVersion": 3,
+    "gCheats": {
+      "EasyFrameAdvance": 1
+    },
+    "gCosmetics": {
+      "Goron": {
+        "NeckLength": 5000.0
+      },
+      "Kak": {
+        "Windmill_Speed": {
+          "Changed": 1,
+          "Value": 6000.0
+        }
+      }
+    },
     "gEnhancements": {
       "AdultMasks": 1,
       "AnubisFix": 1,
@@ -196,6 +210,11 @@
       "ToTMedallionsColors": 1,
       "TwoHandedIdle": 1,
       "WidescreenActorCulling": 1
+    },
+    "gRandoEnhancements": {
+      "TimeSavers": {
+        "SkipGetItemAnimation": 1
+      }
     },
     "gGameplayStats": {
       "RTATiming": 1

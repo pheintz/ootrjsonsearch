@@ -2,6 +2,9 @@ window.getConfig = function getConfig() {
     return {
         "CVars": {
             "ConfigVersion": 3,
+            "gCheats": {
+                "EasyFrameAdvance": 1
+            },
             "gEnhancements": {
                 "AdultMasks": 1,
                 "AnubisFix": 1,
@@ -152,7 +155,7 @@ window.getConfig = function getConfig() {
                 "AltarHint": "0-1",
                 "BigPoesHint": "0-1",
                 "BiggoronHint": "0-1",
-                "BigPoeTargetCount": "1-10",
+                "BigPoeTargetCount": "0-9",
                 "BlueFireArrows": "0-1",
                 "BombchuBag": "0-1",
                 "BossKeysanity": "0-5",
@@ -175,7 +178,7 @@ window.getConfig = function getConfig() {
                 "FortressCarpenters": "0-2",
                 "FullWallets": "0-1",
                 "GanonTrial": "0-2",
-                "GanonTrialCount": "0-5",
+                "GanonTrialCount": "0-6",
                 "GanondorfHint": "0-1",
                 "GerudoKeys": "0-3",
                 "GossipStoneHints": "0-3",
@@ -220,8 +223,8 @@ window.getConfig = function getConfig() {
                 "ScrubsFixedPrice": "0-199",
                 "ScrubsGiantWalletWeight": "0-100",
                 "ScrubsNoWalletWeight": "0-100",
-                "ScrubsPriceRange1": "0-199",
-                "ScrubsPriceRange2": "0-199",
+                "ScrubsPriceRange1": "0-100",
+                "ScrubsPriceRange2": "0-100",
                 "ScrubsPrices": "0-5",
                 "ScrubsTycoonWalletWeight": "0-100",
                 "SheikLAHint": "0-1",
@@ -256,7 +259,7 @@ window.getConfig = function getConfig() {
                 "ShuffleGrottosEntrances": "0-1",
                 "ShuffleInteriorsEntrances": "0-1",
                 "ShuffleKeyRings": "0-2",
-                "ShuffleKeyRingsRandomCount": "0-9",
+                "ShuffleKeyRingsRandomCount": "0-8",
                 "ShuffleKokiriSword": "0-1",
                 "ShuffleMasterSword": "0-1",
                 "ShuffleMerchants": "0-3",
@@ -282,7 +285,7 @@ window.getConfig = function getConfig() {
                 "StartingBoleroOfFire": "0-1",
                 "StartingDekuShield": "0-1",
                 "StartingEponasSong": "0-1",
-                "StartingHearts": "1-20",
+                "StartingHearts": "0-19",
                 "StartingKokiriSword": "0-1",
                 "StartingMapsCompasses": "0-1",
                 "StartingMasterSword": "0-1",
@@ -304,8 +307,8 @@ window.getConfig = function getConfig() {
                 "SunlightArrows": "0-1",
                 "TokenCount": "0-100",
                 "TriforceHunt": "0-1",
-                "TriforceHuntRequiredPieces": "1-100",
-                "TriforceHuntTotalPieces": "1-100",
+                "TriforceHuntRequiredPieces": "0-99",
+                "TriforceHuntTotalPieces": "0-99",
                 "WarpSongText": "0-1",
                 "ZorasFountain": "0-2"
             }

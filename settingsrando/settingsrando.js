@@ -42,6 +42,8 @@ function renderInputs(obj, parentKey = '') {
 }
 
 function generateConfigForDownload(objectToReplace) {
+    RandomizeTriforcePieces();
+    RandomizeSongs();
     const outputJSON = structuredClone(objectToReplace);
 
     const checkboxes = document.querySelectorAll('.randomize-check');
@@ -62,7 +64,7 @@ function generateConfigForDownload(objectToReplace) {
             }
             else if (path.includes('ExcludedLocations')) {
                 // frogs in the rain coin toss
-                if ((Math.floor(Math.random() * 2) == 0)) {
+                if (coinToss()) {
                     value = min;
                 }
                 else {
@@ -78,6 +80,8 @@ function generateConfigForDownload(objectToReplace) {
         }
         current[keys[keys.length - 1]] = value;
     });
+    // validate triforce hunt
+    
     downloadJsonAsFile(outputJSON, 'settingsrando.json');
 }
 
@@ -133,6 +137,22 @@ function RandomizeSongs() {
             element.setAttribute('data-max', minmax);
         }
     });
+}
+
+function RandomizeTriforcePieces() {
+    const triforceHuntMin = document.querySelector(`[id="CVars.gRandoSettings.TriforceHuntRequiredPieces"]`);
+    const triforceHuntMax = document.querySelector(`[id="CVars.gRandoSettings.TriforceHuntTotalPieces"]`);
+    
+    const maxpieces = Math.floor(Math.random() * 100);
+    triforceHuntMax.setAttribute('data-min', maxpieces);
+    triforceHuntMax.setAttribute('data-max', maxpieces);
+
+    const minpieces = Math.floor(Math.random() * maxpieces);
+    while (minpieces > maxpieces) {
+        console.log(`rerolling triforce hunt min: ${minpieces}, max: ${maxpieces}`);
+    }
+    triforceHuntMin.setAttribute('data-min', minpieces);
+    triforceHuntMin.setAttribute('data-max', minpieces);
 }
 
 function coinToss() {
