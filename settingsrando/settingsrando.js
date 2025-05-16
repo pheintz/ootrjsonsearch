@@ -13,9 +13,11 @@ function renderInputs(obj, parentKey = '') {
             html += renderInputs(value, fullKey);
         } else if (typeof value === 'string') {
             var minMax = value.split('-');
+            var min = minMax[0];
+            var max = minMax.length > 1 ? minMax[1] : "";
             html += '<div style="margin-left: 20px;">';
             html += `<label for="${putSpacesInCamelCase(fullKey)}">${putSpacesInCamelCase(key)}: </label>`;
-            html += `<input data-min="${minMax[0]}" data-max="${minMax[1]}" type="checkbox" id="${fullKey}" class='randomize-check' name="${fullKey}" ${value ? 'checked' : ''}><br>`;
+            html += `<input data-min="${min}" data-max="${max}" type="checkbox" id="${fullKey}" class='randomize-check' name="${fullKey}" ${value ? 'checked' : ''}><br>`;
             html += '</div>';
         }
         
@@ -34,13 +36,26 @@ function generateConfigForDownload(objectToReplace) {
         const max = checkbox.getAttribute('data-max');
 
         let value;
-        if (min !== null && max !== null) {
+        if (min && max) {
             value = Math.floor(Math.random() * (parseInt(max) - parseInt(min) + 1)) + parseInt(min);
-        } else {
+        }
+        else if (path.includes('EnabledTricks'))
+        {
+            // Do nothing. Keep all tricks in logic.
+            value = min;
+        }
+        else if (path.includes('ExcludedLocations')) {
+            // frogs in the rain coin toss
+            if ((Math.floor(Math.random() * 2) == 0)) {
+                value = min;
+            }
+            else {
+                value = "";
+            }
+        }
+        else {
             value = checkbox.checked;
         }
-
-        // Set value in nested object using path
         const keys = path.split('.');
         let current = outputJSON;
         for (let i = 0; i < keys.length - 1; i++) {
