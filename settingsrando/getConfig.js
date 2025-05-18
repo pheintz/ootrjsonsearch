@@ -3,7 +3,8 @@ window.getConfig = function getConfig() {
         "CVars": {
             "ConfigVersion": 3,
             "gCheats": {
-                "EasyFrameAdvance": 1
+                "EasyFrameAdvance": 1,
+                "InfiniteMoney": 1
             },
             "gEnhancements": {
                 "AdultMasks": 1,
@@ -11,9 +12,9 @@ window.getConfig = function getConfig() {
                 "AssignableTunicsAndBoots": 1,
                 "BetterFarore": 1,
                 "BetterOwl": 1,
-                "BlueFireArrows": 1,
+                "BlueFireArrows": "0-1",
                 "BombchusOOB": 1,
-                "BowSlingshotAmmoFix": 0,
+                "BowSlingshotAmmoFix": 1,
                 "ChestSizeAndTextureMatchContents": 0,
                 "ChestSizeDependsStoneOfAgony": 0,
                 "ClimbSpeed": 3,
