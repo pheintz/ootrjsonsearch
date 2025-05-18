@@ -145,6 +145,9 @@ window.getConfig = function getConfig() {
             "gGameplayStats": {
                 "RTATiming": 1
             },
+            "gRandoEnhancements": {
+                "MysteriousShuffle": 1
+            },
             "gRandoSettings": {
                 "100GSHint": "0-1",
                 "10GSHint": "0-1",

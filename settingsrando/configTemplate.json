@@ -213,7 +213,9 @@
     },
     "gRandoEnhancements": {
       "TimeSavers": {
-        "SkipGetItemAnimation": 1
+        "SkipGetItemAnimation": 1,
+        "MysteriousShuffle": 1
+
       }
     },
     "gGameplayStats": {
