@@ -685,7 +685,7 @@ window.getTricks = function getTricks() {
                 "embed": "https://youtube.com/embed/un_s31uOhlM",
             },
             {
-                "name": "Mega Sidehop Into Darunia's Room",
+                "name": "Bombs Mega Sidehop Into Darunia's Room",
                 "location": "Goron City",
                 "description": `Target wall, turn right, sidehop, roll and retarget.
                                 Press forward to move along fence for angle.
@@ -697,6 +697,21 @@ window.getTricks = function getTricks() {
                 "age": "child",
                 "embed": "https://youtube.com/embed/THbUU1wWTsE",
                 
+            },
+            {
+                "name": "Bombchu Mega Sidehop Into Darunia's Room",
+                "location": "Goron City",
+                "description": `
+                    target wall, turn right, sidehop right, roll + retarget
+                    hold angle and walk forward and let fence push you
+                    turn around at the edge and do one roll
+                    pull chu, shield drop and roll on 10th red
+                    hold right during the roll
+                    sidehop on 4th explosion frame (where link is upright)
+                `,
+                "tags": ["bombchu", "mega sidehop"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/ElAAh5NIZk8",
             },
             {
                 "name": "How To Weirdshot",
