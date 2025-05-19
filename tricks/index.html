@@ -3,27 +3,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="max-age=86400, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
     <title>OOT Tricks Compendium</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="../site.css?v=<!-- VERSION -->">
+    <link rel="stylesheet" href="./tricks.css?v=<!-- VERSION -->">
 </head>
 <body>
     <h1>
         Tricks Compendium
     </h1>
+
     <div id="search-container">
-        <label for="search">Search</label>
+        <label for="search">Search or <a onclick="listTricksAsDirectory()">view as a list</a></label>
         <input id="search" type="text" placeholder="search by trick, item, area..." />
     </div>
     <div class="notification" role="alert" aria-live="polite" id="copy-notification"></div>
     <div id="search-results" class="tricksList">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
-
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script src="./shareModule.js?v=<!-- VERSION -->"></script>
