@@ -72,35 +72,12 @@ $(document).ready(function () {
     if (trickParam) {
         handleSearch(trickParam.toLowerCase());
     }
+});
 
-    function handleSearch(query) {
-        const filteredTricks = filterTricks(query);
-        const filters = extractFilters(filteredTricks);
-
-        const htmlParts = [];
-
-        if (filters.size > 0) {
-            htmlParts.push(renderFilters(filters));
-        }
-
-        if (filteredTricks.length > 0) {
-            htmlParts.push(renderTrickCards(filteredTricks));
-        }
-
-        const resultsHtml = htmlParts.join('');
-        $searchResults.html(resultsHtml || `<p>No results found for "${query}"</p>`);
-
-        if (filteredTricks.length > 0) {
-            initFilterButtons();
-            bindShareButtons(); // bind click events on .trick-icon
-        }
-    }
-
-
-    function CreateEmbedIframe(embedUrl) {
-        const isTwitch = embedUrl.includes("twitch.tv");
-        const parentParam = isTwitch ? "&parent=ootrjsonsearch.org" : "";
-        return `
+function CreateEmbedIframe(embedUrl) {
+    const isTwitch = embedUrl.includes("twitch.tv");
+    const parentParam = isTwitch ? "&parent=ootrjsonsearch.org" : "";
+    return `
            <div class="video-container">
                <iframe
                    src="${embedUrl.replace("shorts/", "embed/")}${parentParam}"
@@ -111,67 +88,69 @@ $(document).ready(function () {
                </iframe>
            </div>
        `;
-    }
+}
 
-    function initFilterButtons() {
-        const activeTags = new Set();
-        $('.filter-button').click(function () {
-            const filter = $(this).text().toLowerCase();
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-                activeTags.delete(filter);
+function initFilterButtons() {
+    const activeTags = new Set();
+    $('.filter-button').click(function () {
+        const filter = $(this).text().toLowerCase();
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            activeTags.delete(filter);
+        } else {
+            $(this).addClass('active');
+            activeTags.add(filter);
+        }
+        $('.trick-card-container').each(function () {
+            const cardTags = $(this).find('.tag').map(function () {
+                return $(this).text().toLowerCase();
+            }).get();
+
+            const matchesAll = Array.from(activeTags).every(tag => cardTags.includes(tag));
+
+            if (activeTags.size === 0 || matchesAll) {
+                $(this).show();
             } else {
-                $(this).addClass('active');
-                activeTags.add(filter);
+                $(this).hide();
             }
-            $('.trick-card-container').each(function () {
-                const cardTags = $(this).find('.tag').map(function () {
-                    return $(this).text().toLowerCase();
-                }).get();
-
-                const matchesAll = Array.from(activeTags).every(tag => cardTags.includes(tag));
-
-                if (activeTags.size === 0 || matchesAll) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
-            });
         });
-    }
-    function filterTricks(query) {
-        if (!query.trim()) return tricksJson.tricks;
+    });
+}
 
-        const fuseResults = trickFuse.search(query);
-        return fuseResults.map(result => result.item);
-    }
+function filterTricks(query) {
+    if (!query.trim()) return tricksJson.tricks;
 
-    function extractFilters(tricks) {
-        const filters = new Set();
-        tricks.forEach(trick => {
-            trick.tags.forEach(item => filters.add(item.toLowerCase()));
-            if (trick.location) filters.add(trick.location.toLowerCase());
-            if (trick.age) filters.add(trick.age.toLowerCase());
-        });
-        return filters;
-    }
+    const fuseResults = trickFuse.search(query);
+    return fuseResults.map(result => result.item);
+}
 
-    function renderFilters(filters) {
-        let html = `<div class='filter-container'>`;
-        filters.forEach(filter => {
-            html += `<div class="filter-button">${filter}</div>`;
-        });
-        html += `</div>`;
-        return html;
-    }
+function extractFilters(tricks) {
+    const filters = new Set();
+    tricks.forEach(trick => {
+        trick.tags.forEach(item => filters.add(item.toLowerCase()));
+        if (trick.location) filters.add(trick.location.toLowerCase());
+        if (trick.age) filters.add(trick.age.toLowerCase());
+    });
+    return filters;
+}
 
-    function renderTrickCards(tricks) {
-        return tricks.map(trick => {
-            const embed = CreateEmbedIframe(trick.embed);
-            const shareUrl = `${baseShareUrl}${encodeURIComponent(trick.name)}`;
+function renderFilters(filters) {
+    let html = `<div class='filter-container'>`;
+    filters.forEach(filter => {
+        html += `<div class="filter-button">${filter}</div>`;
+    });
+    html += `</div>`;
+    return html;
+}
 
-            return `
-        <div class="trick-card-container">
+function renderTrickCards(tricks) {
+    var separator = tricks.length > 1 ? "top-border" : "";
+    return tricks.map(trick => {
+        const embed = CreateEmbedIframe(trick.embed);
+        const shareUrl = `${baseShareUrl}${encodeURIComponent(trick.name)}`;
+
+        return `
+        <div class="trick-card-container ${separator}">
             <article class="trick-card">
                 <h2 class="trick-header">
                     ${trick.name}
@@ -188,16 +167,108 @@ $(document).ready(function () {
             </article>
         </div>
         `;
-        }).join('');
+    }).join('');
+}
+
+function bindShareButtons() {
+    document.querySelectorAll('.trick-icon').forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const url = icon.getAttribute('data-url');
+            if (url) ShareModule.show(url);
+        });
+    });
+}
+
+function handleSearch(query) {
+    const filteredTricks = filterTricks(query);
+    const filters = extractFilters(filteredTricks);
+
+    const htmlParts = [];
+
+    if (filters.size > 0) {
+        htmlParts.push(renderFilters(filters));
     }
 
-    function bindShareButtons() {
-        document.querySelectorAll('.trick-icon').forEach(icon => {
-            icon.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const url = icon.getAttribute('data-url');
-                if (url) ShareModule.show(url);
-            });
-        });
+    if (filteredTricks.length > 0) {
+        htmlParts.push(renderTrickCards(filteredTricks));
     }
-});
+
+    const resultsHtml = htmlParts.join('');
+    $searchResults.html(resultsHtml || `<p>No results found for "${query}"</p>`);
+
+    if (filteredTricks.length > 0) {
+        initFilterButtons();
+        bindShareButtons(); // bind click events on .trick-icon
+    }
+}
+
+
+function listTricksAsDirectory() {
+    // Group tricks by location
+    const tricksByLocation = {};
+    tricksJson.tricks.forEach(trick => {
+        const location = trick.location || 'Unknown';
+        if (!tricksByLocation[location]) {
+            tricksByLocation[location] = [];
+        }
+        tricksByLocation[location].push(trick);
+    });
+
+    // Sort locations alphabetically
+    const sortedLocations = Object.keys(tricksByLocation).sort((a, b) => a.localeCompare(b));
+
+    // Build HTML with headers for each location
+    let html = '<div id="directory">';
+    sortedLocations.forEach(location => {
+        html += `<h3>${location}</h3>
+        <div class="directory-list">
+            <ul>`;
+            tricksByLocation[location]
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .forEach(trick => {
+                    html += `<li class="directory-item">${trick.name}</li>`;
+                });
+            html += `</ul>
+        </div>`;
+    });
+    html += '</div>';
+
+    $('#search-results').html(html);
+
+    $('.directory-item').click(function () {
+        const trickName = $(this).text().toLowerCase();
+        // Find the exact trick by name (case-insensitive)
+        const trick = tricksJson.tricks.find(t => t.name.toLowerCase() === trickName);
+        if (trick) {
+
+            // Show the result in a modal
+            const $modal = $('#trick-modal');
+            if ($modal.length === 0) {
+                // Create modal if it doesn't exist
+                $('body').append(`
+                    <div id="trick-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div id="modal-body"></div>
+                        </div>
+                    </div>
+                `);
+            }
+            $('#modal-body').html(renderTrickCards([trick]));
+            $('#trick-modal').show();
+            $('body').css('overflow', 'hidden');
+            $('#trick-modal .close').click(function () {
+                $('#trick-modal').hide();
+                $('body').css('overflow', 'auto');
+            });
+            $('#trick-modal').on('click', function (e) {
+                if (e.target === this) {
+                    $(this).hide();
+                    $('body').css('overflow', 'auto');
+                }
+            });
+            bindShareButtons();
+        }
+    });
+}
