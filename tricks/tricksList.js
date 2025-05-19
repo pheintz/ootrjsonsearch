@@ -737,8 +737,8 @@ window.getTricks = function getTricks() {
                                 quick shield drop bomb
                                 backflip
                                 pull hookshot or bow and cancel with shield
-                                Buffer in L+R roll on big blue, big red, or first explosion frame
-                                hold down on control stick from 2nd frame of roll until you hit the explosion
+                                Buffer in Z+R roll on big blue, big red, or first explosion frame
+                                hold down during the roll
                                 damage frame: it looks like link is getting pushed back and you'll see hook or bow in hand
 
                                 from unpause here frames:
