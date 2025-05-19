@@ -806,6 +806,23 @@ window.getTricks = function getTricks() {
                 "embed": "https://clips.twitch.tv/embed?clip=FrigidDepressedTitanDoritosChip-yMZMygiNziiIz4e2",
             },
             {
+                "name": "Skip Ganon Trials Bombchu",
+                "location": "Ganon's Castle",
+                "description": `
+                                get isg, line up roughly with the water trial door, turn around and go to the wall
+                                turn right, sidehop right, turn right
+                                sidehop left, on 2nd frame of sidehop shielddrop chu (keep holding Z+R)
+                                on the frame link touches the ground, Z+R+Backflip
+                                on the frame link 'freezes' in the air (shield will rotate left a bit) release all inputs
+                                once upright, shield drop chu (Z+R+Bombchu)
+                                3 frames later hold shield and backflip
+                                backflip again
+                `,
+                "tags": ["bombchu"],
+                "age": "adult",
+                "embed": "https://clips.twitch.tv/embed?clip=FrigidDepressedTitanDoritosChip-yMZMygiNziiIz4e2",
+            },
+            {
                 "name": "Door of Time Skip w/ Lunge Storage",
                 "location": "Temple of Time",
                 "description": `inputs for lunge storage:
