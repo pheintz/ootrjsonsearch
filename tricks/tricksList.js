@@ -820,7 +820,7 @@ window.getTricks = function getTricks() {
                 `,
                 "tags": ["bombchu"],
                 "age": "adult",
-                "embed": "https://clips.twitch.tv/embed?clip=FrigidDepressedTitanDoritosChip-yMZMygiNziiIz4e2",
+                "embed": "https://youtube.com/embed/rXESrlG7nE4",
             },
             {
                 "name": "Door of Time Skip w/ Lunge Storage",
