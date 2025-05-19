@@ -148,7 +148,23 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu"],
                 "age": "adult",
                 "embed": "https://youtube.com/embed/G6XVwXbBo8s",
-                
+            },
+            {
+                "name": "Hookshot Jump Tree Skultulla Lake Hylia",
+                "location": "Lake Hylia",
+                "description": `
+                                have hookshot in hand
+                                target tree
+                                hold angle and roll into corner
+                                backflip, sidehop right, sidehop left, roll without retargeting
+                                bonk tree and mash hookshot
+                                if you want to buffer:
+                                frame of red dot showing: press hookshot button
+                                release one frame later
+                                `,
+                "tags": ["hookshot"],
+                "age": "adult",
+                "embed": "https://youtube.com/embed/x_wv4TWVpEs",
             },
             {
                 "name": "Water Temple BK Skip Bombchu",
