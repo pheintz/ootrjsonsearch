@@ -31,7 +31,7 @@ window.getTricks = function getTricks() {
                 
             },
             {
-                "name": "child qpa hover into ic",
+                "name": "qpa hover into ice cavern",
                 "location": "Zora's Fountain",
                 "description": `
                                 get QPA and ISG
@@ -357,7 +357,19 @@ window.getTricks = function getTricks() {
                 "tags": ["bombs"],
                 "age": "any age",
                 "embed": "https://youtube.com/embed/sdOLkSfFevY",
+            },
+            {
+                "name": "Bombs or Bombchu Clip Into Gerudo Valley Boulder Grotto",
+                "location": "Gerudo Valley",
+                "description": `
+                            For the angle: after turning around, use the top of the ridge where the angle changes.
 
+                            chus: 3 rolls and megaflip
+                            bombs: 4 rolls, bomb, shield drop, roll, backflip, megaflip
+                `,
+                "tags": ["bombs", "bombchu"],
+                "age": "any age",
+                "embed": "https://youtube.com/embed/nxLp15RctiQ",
             },
             {
                 "name": "Gerudo Valley Cucko Jump w/ sticks",
@@ -423,7 +435,6 @@ window.getTricks = function getTricks() {
                 "tags": ["bombchu"],
                 "age": "any age",
                 "embed": "",
-                
             },
             {
                 "name": "Jabu Blue Switch Child Skip",
@@ -699,6 +710,37 @@ window.getTricks = function getTricks() {
                 "tags": ["itemless"],
                 "age": "child",
                 "embed": "https://youtube.com/embed/un_s31uOhlM",
+            },
+            {
+                "name": "Clip into DMC from Goron City Chus",
+                "location": "Goron City",
+                "description": `
+                                Target wall behind torch
+                                turn left
+                                roll into corner
+                                with Z: backflip, roll
+                                Shield drop chu on 8th red
+                                R+Z+Roll on black chu to the right
+                `,
+                "tags": ["bombchu"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/yZcLZ4H6biY",
+            },
+            {
+                "name": "Clip into DMC from Goron City Bombs",
+                "location": "Goron City",
+                "description": `
+                                Target wall behind torch
+                                turn left
+                                roll into corner
+                                shield drop bomb
+                                with Z: backflip, roll
+                                R+Z+Roll on explosion frame
+                                R+Z+down on control stick for the rest
+                `,
+                "tags": ["bombs"],
+                "age": "child",
+                "embed": "https://youtube.com/embed/BGQS_VSnrtw",
             },
             {
                 "name": "Bombs Mega Sidehop Into Darunia's Room",
