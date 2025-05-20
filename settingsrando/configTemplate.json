@@ -239,7 +239,7 @@
       "BridgeRewardOptions": "0-2",
       "ChickensHint": "0-1",
       "ClosedForest": "0-2",
-      "CompleteMaskQuest": "0-1",
+      "CompleteMaskQuest": 1,
       "CuccosToReturn": "0-7",
       "DampeHint": "0-1",
       "DecoupleEntrances": "0-1",
