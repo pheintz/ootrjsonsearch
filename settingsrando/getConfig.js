@@ -85,7 +85,7 @@ window.getConfig = function getConfig() {
                 "N64WeirdFrames": 1,
                 "NaviTextFix": 1,
                 "NewDrops": 1,
-                "NightGSAlwaysSpawn": "0-1",
+                "NightGSAlwaysSpawn": 1,
                 "NoForcedNavi": 1,
                 "NoInputForCredits": 1,
                 "NutsExplodeBombs": 1,
