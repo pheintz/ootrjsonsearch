@@ -191,7 +191,7 @@ window.getConfig = function getConfig() {
                 "HBAHint": "0-1",
                 "HintClarity": "0-2",
                 "HintDistribution": "0-2",
-                "IceTraps": "0-4",
+                "IceTraps": "0-3",
                 "IncludeTycoonWallet": "0-1",
                 "InfiniteUpgrades": "0-2",
                 "ItemPool": "0-3",
