@@ -462,7 +462,7 @@ window.getTricks = function getTricks() {
                 "description": `
                     Align with wall, turn around,
                     hold z forever:
-                    hop to corner, left sidehop 2x, backflip, walk forward max speed.
+                    hop to corner, 2x left sidehop, backflip, walk forward max speed.
                     A to drop then pull stick+jumpslash on 4th frame or sword immediately.`,
                 "tags": [TWOHW, ONEHW, BK_SKIP],
                 "age": ADULT,
