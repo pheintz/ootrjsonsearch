@@ -915,7 +915,30 @@ window.getTricks = function getTricks() {
                 "tags": [ITEMLESS],
                 "age": ADULT,
                 "embed": "https://youtube.com/embed/Y9DnpdHWLhs",
-                
+            },
+            {
+                "name": "Vine Clip to Deadhand",
+                "location": BOTW,
+                "description": `
+                                frames for clip to get as deep in the water as possible:
+
+                                feet above the brick line (2 climbs up after grabbing the wall)
+                                hold Z the whole time:
+                                frame 1: A + Z
+                                frame 2: Down + Z
+                                frame 3: Z
+                                frame 4: Z
+                                frame 5: Z + Bombchu
+                                frame 6 and on: Z + R + UP
+
+                                there's not a lot of time for:
+                                Up-leftish and retarget in the water
+                                swim under the track
+                                up-right out of the water and jumpslash towards the corner of the room
+                `,
+                "tags": [ITEMLESS],
+                "age": ADULT,
+                "embed": "https://youtube.com/embed/SGmPuPiSFLo",
             },
             {
                 "name": "DMC Fairy Boulder Skip w/ Bombchu",
