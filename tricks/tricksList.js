@@ -228,6 +228,27 @@ window.getTricks = function getTricks() {
                 "embed": "https://youtube.com/embed/x_wv4TWVpEs",
             },
             {
+                "name": "Enter Water Temple As Child w Sticks",
+                "location": LAKE_HYLIA,
+                "description": `
+                                hold z until you hit the water at the very bottom
+                                1 sidehop left, 4 backflips,
+                                downroll (roll without retarget)
+                                hold left the entire time for the roll
+
+                                check for the frame where link pops up and pull stick and jumpslash as soon as stick is out.
+
+                                keep holding Z and Left and you'll fall off, and keep holding Z and Left until:
+
+                                watch the top of the screen where the angle of the water texture changes (there's a 'peak'). the first frame that corner goes off screen switch to holding Z and Right and hold until you hit the water
+
+                                swim
+                                `,
+                "tags": [DEKU_STICKS],
+                "age": CHILD,
+                "embed": "https://youtube.com/embed/rXNEoKCei-Y",
+            },
+            {
                 "name": "Water Temple BK Skip Bombchu",
                 "location": WATER_TEMPLE,
                 "description": `
