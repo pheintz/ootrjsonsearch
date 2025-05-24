@@ -587,9 +587,11 @@ window.getTricks = function getTricks() {
             {
                 "name": "Jabu Blue Switch Adult Skip",
                 "location": JABUS_BELLY,
-                "description": `frame to open door is first frame link's hand is off the ground, leaning left
+                "description": `
+                                frame to open door is first frame link's hand is off the ground, leaning left
                                 no need to hold z at any point
-                                buffer A-button on the final unpause`,
+                                buffer A-button on the final unpause
+                                `,
                 "tags": [ITEMLESS],
                 "age": ADULT,
                 "embed": "https://www.youtube.com/embed/G9cNyW5K8Vc",
@@ -619,7 +621,13 @@ window.getTricks = function getTricks() {
             {
                 "name": "Child Forest Temple BK Skip bombchu",
                 "location": FOREST_TEMPLE,
-                "description": "hold z the whole time: one frame a+down, one frame down on control stick, one frame shield (hold the rest of the way), one frame chu pull,  z+r+up the rest of the way",
+                "description": `
+                            vine clip frames:
+                            Hold Z
+                            1: A+Z
+                            2: Z+Down
+                            3: Z+Bombchu
+                            4+: Z+R+Up`,
                 "tags": [BOMBCHU, BK_SKIP, VINE_CLIP],
                 "age": CHILD,
                 "embed": "https://youtube.com/embed/f0l6W0blyUw",
@@ -628,7 +636,8 @@ window.getTricks = function getTricks() {
             {
                 "name": "Forest Temple Mega Backflip to Scarecrow",
                 "location": FOREST_TEMPLE,
-                "description": `get in corner next to switch, 
+                "description": `
+                                get in corner next to switch, 
                                 turn around and walk forward to climb up railing
                                 turn right and sidestep until links right heel is touching the railing
                                 c-up to line up backflip landing zone
@@ -677,7 +686,8 @@ window.getTricks = function getTricks() {
             {
                 "name": "Child Statue Climb",
                 "location": SPIRIT_TEMPLE,
-                "description": `Get ISG. align facing the head on the shoulder, turn left
+                "description": `
+                Get ISG. align facing the head on the shoulder, turn left
                 z, take a few side steps down to drop bomb. get back up
                 backflip on big blue.
                 shield drop+2nd backflip on second exhale (watch link's feet or bottom of tunic movement)
@@ -922,7 +932,7 @@ window.getTricks = function getTricks() {
                                 hold down during the roll
                                 damage frame: it looks like link is getting pushed back and you'll see hook or bow in hand
 
-                                from unpause here frames:
+                                from damage frame:
                                 1 Z+R+Down
                                 2 Z+R+Down
                                 3 Z+R+Down
