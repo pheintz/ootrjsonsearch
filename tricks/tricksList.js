@@ -32,6 +32,7 @@ const DEKU_TREE = "Deku Tree";
 const GORON_CITY = "Goron City";
 const DODONGOS_CAVERN = "Dodongo's Cavern";
 const JABUS_BELLY = "Jabu's Belly";
+const ZORAS_RIVER = "Zora's River";
 const ZORAS_DOMAIN = "Zora's Domain";
 const ZORAS_FOUNTAIN = "Zora's Fountain";
 const ICE_CAVERN = "Ice Cavern";
@@ -137,7 +138,33 @@ window.getTricks = function getTricks() {
                 "tags": [DEKU_STICKS],
                 "age": CHILD,
                 "embed": "https://youtube.com/embed/Nl9dUk5E9jA",
-                
+            },
+            {
+                "name": "Bombs Sidehop Into Zoras Domain Waterfall Skip",
+                "location": ZORAS_RIVER,
+                "description": `
+                                ISG, target wall, 2ess left, hold angle, get into corner
+                                Z+A+R on 9th red (frame before big blue)
+                                hold right and mash A                                `,
+                "tags": [BOMBS],
+                "age": ANY_AGE,
+                "embed": "https://youtube.com/embed/Q7XjNM6AIog",
+            },
+            {
+                "name": "Bombchu Mega Sidehop From Zoras Domain to Lost Woods",
+                "location": ZORAS_RIVER,
+                "description": `
+                                backwalk off the edge,
+                                2x sidehop right, sidehop left, sidehop right
+                                2ess right
+                                from 10th red:
+                                frame 0: shield drop
+                                frame 1: roll
+                                hold right during roll until link is standing
+                                sidehop right                                `,
+                "tags": [BOMBCHU],
+                "age": ANY_AGE,
+                "embed": "https://youtube.com/embed/bYZAdqDIHBY",
             },
             {
                 "name": "Chu + Hoverboots up to Spirit Temple Hand Chest",
@@ -379,7 +406,8 @@ window.getTricks = function getTricks() {
             {
                 "name": "Bomb QPA Hover Into Forest",
                 "location": SACRED_FOREST_MEADOW,
-                "description": `get QPA and ISG (see: "Adult Stick Nut QPA"))
+                "description": `
+                                get QPA and ISG (see: "Adult Stick Nut QPA"))
                                 get into corner
                                 3 sidehop left and roll with target held
                                 turn right. 4 sidehops right, turn left, 2 ess left
@@ -410,7 +438,8 @@ window.getTricks = function getTricks() {
             {
                 "name": "GTG Gate Clip Bombs",
                 "location": GERUDO_TRAINING_GROUNDS,
-                "description": `go into corner. A drop bomb get on fence and climb sideways one over into the corner
+                "description": `
+                                go into corner. A drop bomb get on fence and climb sideways one over into the corner
                                 to clip right: hold right on big red
                                 to clip left: hold left on first explosion frame
                 `,
@@ -523,10 +552,16 @@ window.getTricks = function getTricks() {
             {
                 "name": "Deku Tree B1 Skip",
                 "location": DEKU_TREE,
-                "description": "",
+                "description": `
+                            align with wall. I look at links left pant leg to just overlap the left corner.
+                            turn left
+                            without letting go of Z: sidehop left, roll and pause
+                            release Z
+                            start holding up on the first frame link is diving forward (3rd frame of roll)
+                `,
                 "tags": [ITEMLESS],
                 "age": CHILD,
-                "embed": "https://www.youtube.com/shorts/TEAxY97Y0c0",
+                "embed": "https://youtube.com/embed/wuZiqjfhChQ",
             },
             {
                 "name": "Dodongo Eyes Early Boss Bombchu",
